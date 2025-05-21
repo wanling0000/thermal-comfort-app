@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wanling.infrastructure.persistent.mapper.UsersMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanling.infrastructure.persistent.po.Users">
+            <id property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="created_at" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,name,email,
+        password,created_at
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from users
+        where  user_id = #{user_id,jdbcType=OTHER} 
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from users
+        where  user_id = #{user_id,jdbcType=OTHER} 
+    </delete>
+    <insert id="insert" keyColumn="user_id" keyProperty="user_id" parameterType="com.wanling.infrastructure.persistent.po.Users" useGeneratedKeys="true">
+        insert into users
+        ( user_id,name,email
+        ,password,created_at)
+        values (#{user_id,jdbcType=OTHER},#{name,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR}
+        ,#{password,jdbcType=VARCHAR},#{created_at,jdbcType=TIMESTAMP})
+    </insert>
+    <insert id="insertSelective" keyColumn="user_id" keyProperty="user_id" parameterType="com.wanling.infrastructure.persistent.po.Users" useGeneratedKeys="true">
+        insert into users
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="user_id != null">user_id,</if>
+                <if test="name != null">name,</if>
+                <if test="email != null">email,</if>
+                <if test="password != null">password,</if>
+                <if test="created_at != null">created_at,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="user_id != null">#{user_id,jdbcType=OTHER},</if>
+                <if test="name != null">#{name,jdbcType=VARCHAR},</if>
+                <if test="email != null">#{email,jdbcType=VARCHAR},</if>
+                <if test="password != null">#{password,jdbcType=VARCHAR},</if>
+                <if test="created_at != null">#{created_at,jdbcType=TIMESTAMP},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.Users">
+        update users
+        <set>
+                <if test="name != null">
+                    name = #{name,jdbcType=VARCHAR},
+                </if>
+                <if test="email != null">
+                    email = #{email,jdbcType=VARCHAR},
+                </if>
+                <if test="password != null">
+                    password = #{password,jdbcType=VARCHAR},
+                </if>
+                <if test="created_at != null">
+                    created_at = #{created_at,jdbcType=TIMESTAMP},
+                </if>
+        </set>
+        where   user_id = #{user_id,jdbcType=OTHER} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.wanling.infrastructure.persistent.po.Users">
+        update users
+        set 
+            name =  #{name,jdbcType=VARCHAR},
+            email =  #{email,jdbcType=VARCHAR},
+            password =  #{password,jdbcType=VARCHAR},
+            created_at =  #{created_at,jdbcType=TIMESTAMP}
+        where   user_id = #{user_id,jdbcType=OTHER} 
+    </update>
+</mapper>

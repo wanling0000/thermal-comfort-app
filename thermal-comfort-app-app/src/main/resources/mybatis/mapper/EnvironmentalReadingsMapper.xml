@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wanling.infrastructure.persistent.mapper.EnvironmentalReadingsMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanling.infrastructure.persistent.po.EnvironmentalReadings">
+        <id property="readingId" column="reading_id" jdbcType="VARCHAR"/>
+        <result property="timestamp" column="timestamp" jdbcType="TIMESTAMP"/>
+        <result property="temperature" column="temperature" jdbcType="DOUBLE"/>
+        <result property="humidity" column="humidity" jdbcType="DOUBLE"/>
+        <result property="sensorId" column="sensor_id" jdbcType="VARCHAR"/>
+        <result property="locationTagId" column="location_tag_id" jdbcType="VARCHAR"/>
+        <result property="rawCoordinates" column="raw_coordinates" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        reading_id, timestamp, temperature,
+        humidity, sensor_id,
+        location_tag_id, raw_coordinates
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from environmental_readings
+        where reading_id = #{reading_id, jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        delete from environmental_readings
+        where reading_id = #{reading_id, jdbcType=VARCHAR}
+    </delete>
+
+    <insert id="insert" keyColumn="reading_id" keyProperty="readingId"
+            parameterType="com.wanling.infrastructure.persistent.po.EnvironmentalReadings"
+            useGeneratedKeys="false">
+        <![CDATA[
+        insert into environmental_readings (
+            reading_id, timestamp, temperature,
+            humidity, sensor_id,
+            location_tag_id, raw_coordinates
+        )
+        values (
+                   #{readingId, jdbcType=VARCHAR}, #{timestamp, jdbcType=TIMESTAMP}, #{temperature, jdbcType=DOUBLE},
+                   #{humidity, jdbcType=DOUBLE}, #{sensorId, jdbcType=VARCHAR},
+                   #{locationTagId, jdbcType=VARCHAR}, ST_GeomFromText(#{rawCoordinates, jdbcType=VARCHAR}, 4326)
+               )
+        on conflict (reading_id) do nothing
+        ]]>
+    </insert>
+
+    <insert id="insertSelective" keyColumn="reading_id" keyProperty="reading_id"
+            parameterType="com.wanling.infrastructure.persistent.po.EnvironmentalReadings"
+            useGeneratedKeys="false">
+        insert into environmental_readings
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="reading_id != null">reading_id,</if>
+            <if test="timestamp != null">timestamp,</if>
+            <if test="temperature != null">temperature,</if>
+            <if test="humidity != null">humidity,</if>
+            <if test="battery != null">battery,</if>
+            <if test="sensor_id != null">sensor_id,</if>
+            <if test="location_tag_id != null">location_tag_id,</if>
+            <if test="raw_coordinates != null">raw_coordinates,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="reading_id != null">#{reading_id, jdbcType=VARCHAR},</if>
+            <if test="timestamp != null">#{timestamp, jdbcType=TIMESTAMP},</if>
+            <if test="temperature != null">#{temperature, jdbcType=DOUBLE},</if>
+            <if test="humidity != null">#{humidity, jdbcType=DOUBLE},</if>
+            <if test="battery != null">#{battery, jdbcType=DOUBLE},</if>
+            <if test="sensor_id != null">#{sensor_id, jdbcType=VARCHAR},</if>
+            <if test="location_tag_id != null">#{location_tag_id, jdbcType=VARCHAR},</if>
+            <if test="raw_coordinates != null">#{raw_coordinates, jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.EnvironmentalReadings">
+        update environmental_readings
+        <set>
+            <if test="timestamp != null">timestamp = #{timestamp, jdbcType=TIMESTAMP},</if>
+            <if test="temperature != null">temperature = #{temperature, jdbcType=DOUBLE},</if>
+            <if test="humidity != null">humidity = #{humidity, jdbcType=DOUBLE},</if>
+            <if test="battery != null">battery = #{battery, jdbcType=DOUBLE},</if>
+            <if test="sensor_id != null">sensor_id = #{sensor_id, jdbcType=VARCHAR},</if>
+            <if test="location_tag_id != null">location_tag_id = #{location_tag_id, jdbcType=VARCHAR},</if>
+            <if test="raw_coordinates != null">raw_coordinates = #{raw_coordinates, jdbcType=VARCHAR},</if>
+        </set>
+        where reading_id = #{reading_id, jdbcType=VARCHAR}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.wanling.infrastructure.persistent.po.EnvironmentalReadings">
+        update environmental_readings
+        set
+            timestamp = #{timestamp, jdbcType=TIMESTAMP},
+            temperature = #{temperature, jdbcType=DOUBLE},
+            humidity = #{humidity, jdbcType=DOUBLE},
+            battery = #{battery, jdbcType=DOUBLE},
+            sensor_id = #{sensor_id, jdbcType=VARCHAR},
+            location_tag_id = #{location_tag_id, jdbcType=VARCHAR},
+            raw_coordinates = #{raw_coordinates, jdbcType=VARCHAR}
+        where reading_id = #{reading_id, jdbcType=VARCHAR}
+    </update>
+</mapper>

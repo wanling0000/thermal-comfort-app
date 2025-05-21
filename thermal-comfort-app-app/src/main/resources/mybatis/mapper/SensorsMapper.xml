@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wanling.infrastructure.persistent.mapper.SensorsMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanling.infrastructure.persistent.po.Sensors">
+            <id property="sensor_id" column="sensor_id" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="type" column="type" jdbcType="VARCHAR"/>
+            <result property="last_reading_time" column="last_reading_time" jdbcType="TIMESTAMP"/>
+            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="mac_address" column="mac_address" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        sensor_id,name,type,
+        last_reading_time,user_id,mac_address
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sensors
+        where  sensor_id = #{sensor_id,jdbcType=OTHER} 
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from sensors
+        where  sensor_id = #{sensor_id,jdbcType=OTHER} 
+    </delete>
+    <insert id="insert" keyColumn="sensor_id" keyProperty="sensor_id" parameterType="com.wanling.infrastructure.persistent.po.Sensors" useGeneratedKeys="true">
+        insert into sensors
+        ( sensor_id,name,type
+        ,last_reading_time,user_id,mac_address
+        )
+        values (#{sensor_id,jdbcType=OTHER},#{name,jdbcType=VARCHAR},#{type,jdbcType=VARCHAR}
+        ,#{last_reading_time,jdbcType=TIMESTAMP},#{user_id,jdbcType=OTHER},#{mac_address,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="sensor_id" keyProperty="sensor_id" parameterType="com.wanling.infrastructure.persistent.po.Sensors" useGeneratedKeys="true">
+        insert into sensors
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="sensor_id != null">sensor_id,</if>
+                <if test="name != null">name,</if>
+                <if test="type != null">type,</if>
+                <if test="last_reading_time != null">last_reading_time,</if>
+                <if test="user_id != null">user_id,</if>
+                <if test="mac_address != null">mac_address,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="sensor_id != null">#{sensor_id,jdbcType=OTHER},</if>
+                <if test="name != null">#{name,jdbcType=VARCHAR},</if>
+                <if test="type != null">#{type,jdbcType=VARCHAR},</if>
+                <if test="last_reading_time != null">#{last_reading_time,jdbcType=TIMESTAMP},</if>
+                <if test="user_id != null">#{user_id,jdbcType=OTHER},</if>
+                <if test="mac_address != null">#{mac_address,jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.Sensors">
+        update sensors
+        <set>
+                <if test="name != null">
+                    name = #{name,jdbcType=VARCHAR},
+                </if>
+                <if test="type != null">
+                    type = #{type,jdbcType=VARCHAR},
+                </if>
+                <if test="last_reading_time != null">
+                    last_reading_time = #{last_reading_time,jdbcType=TIMESTAMP},
+                </if>
+                <if test="user_id != null">
+                    user_id = #{user_id,jdbcType=OTHER},
+                </if>
+                <if test="mac_address != null">
+                    mac_address = #{mac_address,jdbcType=VARCHAR},
+                </if>
+        </set>
+        where   sensor_id = #{sensor_id,jdbcType=OTHER} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.wanling.infrastructure.persistent.po.Sensors">
+        update sensors
+        set 
+            name =  #{name,jdbcType=VARCHAR},
+            type =  #{type,jdbcType=VARCHAR},
+            last_reading_time =  #{last_reading_time,jdbcType=TIMESTAMP},
+            user_id =  #{user_id,jdbcType=OTHER},
+            mac_address =  #{mac_address,jdbcType=VARCHAR}
+        where   sensor_id = #{sensor_id,jdbcType=OTHER} 
+    </update>
+</mapper>

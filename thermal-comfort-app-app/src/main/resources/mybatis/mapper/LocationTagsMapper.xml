@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wanling.infrastructure.persistent.mapper.LocationTagsMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanling.infrastructure.persistent.po.LocationTags">
+            <id property="locationTagId" column="location_tag_id" jdbcType="VARCHAR"/>
+            <result property="displayName" column="display_name" jdbcType="VARCHAR"/>
+            <result property="latitude" column="latitude" jdbcType="DOUBLE"/>
+            <result property="longitude" column="longitude" jdbcType="DOUBLE"/>
+            <result property="coordinates" column="coordinates" jdbcType="OTHER"/>
+            <result property="isCustom" column="is_custom" jdbcType="BOOLEAN"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        location_tag_id,display_name,latitude,
+        longitude,coordinates,is_custom,
+        created_at
+    </sql>
+
+    <select id="findNearbyWithSameName" resultType="com.wanling.infrastructure.persistent.po.LocationTags">
+        SELECT *
+        FROM location_tags
+        WHERE display_name = #{displayName}
+          AND ST_DWithin(
+                coordinates,
+                ST_SetSRID(ST_MakePoint(#{longitude}, #{latitude}), 4326),
+                50
+            )
+        LIMIT 1
+    </select>
+
+    <insert id="insertLocationTag" useGeneratedKeys="false">
+        INSERT INTO location_tags (
+            location_tag_id, display_name, latitude, longitude, is_custom, created_at
+        ) VALUES (
+                     #{locationTagId}, #{displayName}, #{latitude}, #{longitude}, #{isCustom}, CURRENT_TIMESTAMP
+                 )
+    </insert>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from location_tags
+        where  location_tag_id = #{location_tag_id,jdbcType=VARCHAR} 
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from location_tags
+        where  location_tag_id = #{location_tag_id,jdbcType=VARCHAR} 
+    </delete>
+    <insert id="insert" keyColumn="location_tag_id" keyProperty="location_tag_id" parameterType="com.wanling.infrastructure.persistent.po.LocationTags" useGeneratedKeys="true">
+        insert into location_tags
+        ( location_tag_id,display_name,latitude
+        ,longitude,coordinates,is_custom
+        ,created_at)
+        values (#{location_tag_id,jdbcType=VARCHAR},#{display_name,jdbcType=VARCHAR},#{latitude,jdbcType=DOUBLE}
+        ,#{longitude,jdbcType=DOUBLE},#{coordinates,jdbcType=OTHER},#{is_custom,jdbcType=BOOLEAN}
+        ,#{created_at,jdbcType=TIMESTAMP})
+    </insert>
+    <insert id="insertSelective" keyColumn="location_tag_id" keyProperty="location_tag_id" parameterType="com.wanling.infrastructure.persistent.po.LocationTags" useGeneratedKeys="true">
+        insert into location_tags
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="location_tag_id != null">location_tag_id,</if>
+                <if test="display_name != null">display_name,</if>
+                <if test="latitude != null">latitude,</if>
+                <if test="longitude != null">longitude,</if>
+                <if test="coordinates != null">coordinates,</if>
+                <if test="is_custom != null">is_custom,</if>
+                <if test="created_at != null">created_at,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="location_tag_id != null">#{location_tag_id,jdbcType=VARCHAR},</if>
+                <if test="display_name != null">#{display_name,jdbcType=VARCHAR},</if>
+                <if test="latitude != null">#{latitude,jdbcType=DOUBLE},</if>
+                <if test="longitude != null">#{longitude,jdbcType=DOUBLE},</if>
+                <if test="coordinates != null">#{coordinates,jdbcType=OTHER},</if>
+                <if test="is_custom != null">#{is_custom,jdbcType=BOOLEAN},</if>
+                <if test="created_at != null">#{created_at,jdbcType=TIMESTAMP},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.LocationTags">
+        update location_tags
+        <set>
+                <if test="display_name != null">
+                    display_name = #{display_name,jdbcType=VARCHAR},
+                </if>
+                <if test="latitude != null">
+                    latitude = #{latitude,jdbcType=DOUBLE},
+                </if>
+                <if test="longitude != null">
+                    longitude = #{longitude,jdbcType=DOUBLE},
+                </if>
+                <if test="coordinates != null">
+                    coordinates = #{coordinates,jdbcType=OTHER},
+                </if>
+                <if test="is_custom != null">
+                    is_custom = #{is_custom,jdbcType=BOOLEAN},
+                </if>
+                <if test="created_at != null">
+                    created_at = #{created_at,jdbcType=TIMESTAMP},
+                </if>
+        </set>
+        where   location_tag_id = #{location_tag_id,jdbcType=VARCHAR} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.wanling.infrastructure.persistent.po.LocationTags">
+        update location_tags
+        set 
+            display_name =  #{display_name,jdbcType=VARCHAR},
+            latitude =  #{latitude,jdbcType=DOUBLE},
+            longitude =  #{longitude,jdbcType=DOUBLE},
+            coordinates =  #{coordinates,jdbcType=OTHER},
+            is_custom =  #{is_custom,jdbcType=BOOLEAN},
+            created_at =  #{created_at,jdbcType=TIMESTAMP}
+        where   location_tag_id = #{location_tag_id,jdbcType=VARCHAR} 
+    </update>
+</mapper>

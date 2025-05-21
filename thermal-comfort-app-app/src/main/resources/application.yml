@@ -1,0 +1,5 @@
+spring:
+  config:
+    name: thermal-comfort-app-app
+  profiles:
+    active: dev

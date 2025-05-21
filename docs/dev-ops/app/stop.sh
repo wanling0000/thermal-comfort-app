@@ -1,0 +1,1 @@
+docker stop thermal-comfort-app

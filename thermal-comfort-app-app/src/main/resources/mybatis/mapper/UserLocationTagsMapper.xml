@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wanling.infrastructure.persistent.mapper.UserLocationTagsMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanling.infrastructure.persistent.po.UserLocationTags">
+            <id property="userLocationTagId" column="user_location_tag_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="latitude" column="latitude" jdbcType="DOUBLE"/>
+            <result property="longitude" column="longitude" jdbcType="DOUBLE"/>
+            <result property="coordinates" column="coordinates" jdbcType="OTHER"/>
+            <result property="relatedLocationTagId" column="related_location_tag_id" jdbcType="VARCHAR"/>
+            <result property="note" column="note" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_location_tag_id,user_id,name,
+        latitude,longitude,coordinates,
+        related_location_tag_id,note,created_at
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from user_location_tags
+        where user_location_tag_id = #{user_location_tag_id, jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from user_location_tags
+        where  user_location_tag_id = #{user_location_tag_id,jdbcType=VARCHAR} 
+    </delete>
+    <insert id="insert" keyColumn="user_location_tag_id" keyProperty="user_location_tag_id" parameterType="com.wanling.infrastructure.persistent.po.UserLocationTags" useGeneratedKeys="true">
+        insert into user_location_tags
+        ( user_location_tag_id,user_id,name
+        ,latitude,longitude,coordinates
+        ,related_location_tag_id,note,created_at
+        )
+        values (#{user_location_tag_id,jdbcType=VARCHAR},#{user_id,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR}
+        ,#{latitude,jdbcType=DOUBLE},#{longitude,jdbcType=DOUBLE},#{coordinates,jdbcType=OTHER}
+        ,#{related_location_tag_id,jdbcType=VARCHAR},#{note,jdbcType=VARCHAR},#{created_at,jdbcType=TIMESTAMP}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="user_location_tag_id" keyProperty="user_location_tag_id" parameterType="com.wanling.infrastructure.persistent.po.UserLocationTags" useGeneratedKeys="true">
+        insert into user_location_tags
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="user_location_tag_id != null">user_location_tag_id,</if>
+                <if test="user_id != null">user_id,</if>
+                <if test="name != null">name,</if>
+                <if test="latitude != null">latitude,</if>
+                <if test="longitude != null">longitude,</if>
+                <if test="coordinates != null">coordinates,</if>
+                <if test="related_location_tag_id != null">related_location_tag_id,</if>
+                <if test="note != null">note,</if>
+                <if test="created_at != null">created_at,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="user_location_tag_id != null">#{user_location_tag_id,jdbcType=VARCHAR},</if>
+                <if test="user_id != null">#{user_id,jdbcType=VARCHAR},</if>
+                <if test="name != null">#{name,jdbcType=VARCHAR},</if>
+                <if test="latitude != null">#{latitude,jdbcType=DOUBLE},</if>
+                <if test="longitude != null">#{longitude,jdbcType=DOUBLE},</if>
+                <if test="coordinates != null">#{coordinates,jdbcType=OTHER},</if>
+                <if test="related_location_tag_id != null">#{related_location_tag_id,jdbcType=VARCHAR},</if>
+                <if test="note != null">#{note,jdbcType=VARCHAR},</if>
+                <if test="created_at != null">#{created_at,jdbcType=TIMESTAMP},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.UserLocationTags">
+        update user_location_tags
+        <set>
+                <if test="user_id != null">
+                    user_id = #{user_id,jdbcType=VARCHAR},
+                </if>
+                <if test="name != null">
+                    name = #{name,jdbcType=VARCHAR},
+                </if>
+                <if test="latitude != null">
+                    latitude = #{latitude,jdbcType=DOUBLE},
+                </if>
+                <if test="longitude != null">
+                    longitude = #{longitude,jdbcType=DOUBLE},
+                </if>
+                <if test="coordinates != null">
+                    coordinates = #{coordinates,jdbcType=OTHER},
+                </if>
+                <if test="related_location_tag_id != null">
+                    related_location_tag_id = #{related_location_tag_id,jdbcType=VARCHAR},
+                </if>
+                <if test="note != null">
+                    note = #{note,jdbcType=VARCHAR},
+                </if>
+                <if test="created_at != null">
+                    created_at = #{created_at,jdbcType=TIMESTAMP},
+                </if>
+        </set>
+        where   user_location_tag_id = #{user_location_tag_id,jdbcType=VARCHAR} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.wanling.infrastructure.persistent.po.UserLocationTags">
+        update user_location_tags
+        set 
+            user_id =  #{user_id,jdbcType=VARCHAR},
+            name =  #{name,jdbcType=VARCHAR},
+            latitude =  #{latitude,jdbcType=DOUBLE},
+            longitude =  #{longitude,jdbcType=DOUBLE},
+            coordinates =  #{coordinates,jdbcType=OTHER},
+            related_location_tag_id =  #{related_location_tag_id,jdbcType=VARCHAR},
+            note =  #{note,jdbcType=VARCHAR},
+            created_at =  #{created_at,jdbcType=TIMESTAMP}
+        where   user_location_tag_id = #{user_location_tag_id,jdbcType=VARCHAR} 
+    </update>
+</mapper>
