@@ -1,6 +1,5 @@
 package com.wanling.infrastructure.persistent.po;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -16,70 +15,75 @@ import lombok.Data;
 @Data
 public class ComfortFeedback implements Serializable {
     /**
-     * Primary key
+     * 
      */
     @TableId
-    private String feedback_id;
+    private String feedbackId;
 
     /**
-     * Associated user
+     * 
      */
-    private String user_id;
+    private String userId;
 
     /**
-     * Feedback time
+     * 
      */
     private LocalDateTime timestamp;
 
     /**
-     * Scale -2 (too cold) to +2 (too hot)
+     * 
      */
-    private Integer comfort_level;
+    private Integer comfortLevel;
 
     /**
-     * Quick vs detailed
+     * 
      */
-    private String feedback_type;
+    private String feedbackType;
 
     /**
-     * FK to Activity
+     * 
      */
-    private String activity_type_id;
+    private String activityTypeId;
 
     /**
-     * One of "light", "medium", "heavy"
+     * 
      */
-    private String clothing_level;
+    private String clothingLevel;
 
     /**
-     * Desired change to temp, e.g., -1 = want cooler
+     * 
      */
-    private Integer adjusted_temp_level;
+    private Integer adjustedTempLevel;
 
     /**
-     * Desired change to humidity
+     * 
      */
-    private Integer adjusted_humid_level;
+    private Integer adjustedHumidLevel;
 
     /**
-     * Freeform user notes
+     * 
      */
     private String notes;
 
     /**
-     * Location of feedback
+     * 
      */
-    private String location_tag_id;
+    private String locationTagId;
 
     /**
-     * FK to associated environmental reading
+     * 
      */
-    private String reading_id;
+    private String readingId;
 
     /**
-     * Actual location when feedback was submitted
+     * 
      */
-    private String raw_coordinates;
+    private Object rawCoordinates;
+
+    /**
+     * 
+     */
+    private String userLocationTagId;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -96,38 +100,40 @@ public class ComfortFeedback implements Serializable {
             return false;
         }
         ComfortFeedback other = (ComfortFeedback) that;
-        return (this.getFeedback_id() == null ? other.getFeedback_id() == null : this.getFeedback_id().equals(other.getFeedback_id()))
-            && (this.getUser_id() == null ? other.getUser_id() == null : this.getUser_id().equals(other.getUser_id()))
+        return (this.getFeedbackId() == null ? other.getFeedbackId() == null : this.getFeedbackId().equals(other.getFeedbackId()))
+            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
             && (this.getTimestamp() == null ? other.getTimestamp() == null : this.getTimestamp().equals(other.getTimestamp()))
-            && (this.getComfort_level() == null ? other.getComfort_level() == null : this.getComfort_level().equals(other.getComfort_level()))
-            && (this.getFeedback_type() == null ? other.getFeedback_type() == null : this.getFeedback_type().equals(other.getFeedback_type()))
-            && (this.getActivity_type_id() == null ? other.getActivity_type_id() == null : this.getActivity_type_id().equals(other.getActivity_type_id()))
-            && (this.getClothing_level() == null ? other.getClothing_level() == null : this.getClothing_level().equals(other.getClothing_level()))
-            && (this.getAdjusted_temp_level() == null ? other.getAdjusted_temp_level() == null : this.getAdjusted_temp_level().equals(other.getAdjusted_temp_level()))
-            && (this.getAdjusted_humid_level() == null ? other.getAdjusted_humid_level() == null : this.getAdjusted_humid_level().equals(other.getAdjusted_humid_level()))
+            && (this.getComfortLevel() == null ? other.getComfortLevel() == null : this.getComfortLevel().equals(other.getComfortLevel()))
+            && (this.getFeedbackType() == null ? other.getFeedbackType() == null : this.getFeedbackType().equals(other.getFeedbackType()))
+            && (this.getActivityTypeId() == null ? other.getActivityTypeId() == null : this.getActivityTypeId().equals(other.getActivityTypeId()))
+            && (this.getClothingLevel() == null ? other.getClothingLevel() == null : this.getClothingLevel().equals(other.getClothingLevel()))
+            && (this.getAdjustedTempLevel() == null ? other.getAdjustedTempLevel() == null : this.getAdjustedTempLevel().equals(other.getAdjustedTempLevel()))
+            && (this.getAdjustedHumidLevel() == null ? other.getAdjustedHumidLevel() == null : this.getAdjustedHumidLevel().equals(other.getAdjustedHumidLevel()))
             && (this.getNotes() == null ? other.getNotes() == null : this.getNotes().equals(other.getNotes()))
-            && (this.getLocation_tag_id() == null ? other.getLocation_tag_id() == null : this.getLocation_tag_id().equals(other.getLocation_tag_id()))
-            && (this.getReading_id() == null ? other.getReading_id() == null : this.getReading_id().equals(other.getReading_id()))
-            && (this.getRaw_coordinates() == null ? other.getRaw_coordinates() == null : this.getRaw_coordinates().equals(other.getRaw_coordinates()));
+            && (this.getLocationTagId() == null ? other.getLocationTagId() == null : this.getLocationTagId().equals(other.getLocationTagId()))
+            && (this.getReadingId() == null ? other.getReadingId() == null : this.getReadingId().equals(other.getReadingId()))
+            && (this.getRawCoordinates() == null ? other.getRawCoordinates() == null : this.getRawCoordinates().equals(other.getRawCoordinates()))
+            && (this.getUserLocationTagId() == null ? other.getUserLocationTagId() == null : this.getUserLocationTagId().equals(other.getUserLocationTagId()));
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((getFeedback_id() == null) ? 0 : getFeedback_id().hashCode());
-        result = prime * result + ((getUser_id() == null) ? 0 : getUser_id().hashCode());
+        result = prime * result + ((getFeedbackId() == null) ? 0 : getFeedbackId().hashCode());
+        result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         result = prime * result + ((getTimestamp() == null) ? 0 : getTimestamp().hashCode());
-        result = prime * result + ((getComfort_level() == null) ? 0 : getComfort_level().hashCode());
-        result = prime * result + ((getFeedback_type() == null) ? 0 : getFeedback_type().hashCode());
-        result = prime * result + ((getActivity_type_id() == null) ? 0 : getActivity_type_id().hashCode());
-        result = prime * result + ((getClothing_level() == null) ? 0 : getClothing_level().hashCode());
-        result = prime * result + ((getAdjusted_temp_level() == null) ? 0 : getAdjusted_temp_level().hashCode());
-        result = prime * result + ((getAdjusted_humid_level() == null) ? 0 : getAdjusted_humid_level().hashCode());
+        result = prime * result + ((getComfortLevel() == null) ? 0 : getComfortLevel().hashCode());
+        result = prime * result + ((getFeedbackType() == null) ? 0 : getFeedbackType().hashCode());
+        result = prime * result + ((getActivityTypeId() == null) ? 0 : getActivityTypeId().hashCode());
+        result = prime * result + ((getClothingLevel() == null) ? 0 : getClothingLevel().hashCode());
+        result = prime * result + ((getAdjustedTempLevel() == null) ? 0 : getAdjustedTempLevel().hashCode());
+        result = prime * result + ((getAdjustedHumidLevel() == null) ? 0 : getAdjustedHumidLevel().hashCode());
         result = prime * result + ((getNotes() == null) ? 0 : getNotes().hashCode());
-        result = prime * result + ((getLocation_tag_id() == null) ? 0 : getLocation_tag_id().hashCode());
-        result = prime * result + ((getReading_id() == null) ? 0 : getReading_id().hashCode());
-        result = prime * result + ((getRaw_coordinates() == null) ? 0 : getRaw_coordinates().hashCode());
+        result = prime * result + ((getLocationTagId() == null) ? 0 : getLocationTagId().hashCode());
+        result = prime * result + ((getReadingId() == null) ? 0 : getReadingId().hashCode());
+        result = prime * result + ((getRawCoordinates() == null) ? 0 : getRawCoordinates().hashCode());
+        result = prime * result + ((getUserLocationTagId() == null) ? 0 : getUserLocationTagId().hashCode());
         return result;
     }
 
@@ -137,19 +143,20 @@ public class ComfortFeedback implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", feedback_id=").append(feedback_id);
-        sb.append(", user_id=").append(user_id);
+        sb.append(", feedback_id=").append(feedbackId);
+        sb.append(", user_id=").append(userId);
         sb.append(", timestamp=").append(timestamp);
-        sb.append(", comfort_level=").append(comfort_level);
-        sb.append(", feedback_type=").append(feedback_type);
-        sb.append(", activity_type_id=").append(activity_type_id);
-        sb.append(", clothing_level=").append(clothing_level);
-        sb.append(", adjusted_temp_level=").append(adjusted_temp_level);
-        sb.append(", adjusted_humid_level=").append(adjusted_humid_level);
+        sb.append(", comfort_level=").append(comfortLevel);
+        sb.append(", feedback_type=").append(feedbackType);
+        sb.append(", activity_type_id=").append(activityTypeId);
+        sb.append(", clothing_level=").append(clothingLevel);
+        sb.append(", adjusted_temp_level=").append(adjustedTempLevel);
+        sb.append(", adjusted_humid_level=").append(adjustedHumidLevel);
         sb.append(", notes=").append(notes);
-        sb.append(", location_tag_id=").append(location_tag_id);
-        sb.append(", reading_id=").append(reading_id);
-        sb.append(", raw_coordinates=").append(raw_coordinates);
+        sb.append(", location_tag_id=").append(locationTagId);
+        sb.append(", reading_id=").append(readingId);
+        sb.append(", raw_coordinates=").append(rawCoordinates);
+        sb.append(", user_location_tag_id=").append(userLocationTagId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

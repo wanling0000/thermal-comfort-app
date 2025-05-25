@@ -1,6 +1,7 @@
 package com.wanling.infrastructure.persistent.mapper;
 
 import com.wanling.infrastructure.persistent.po.UserLocationTags;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
 * @author fwl
@@ -8,6 +9,8 @@ import com.wanling.infrastructure.persistent.po.UserLocationTags;
 * @createDate 2025-05-19 22:50:01
 * @Entity com.wanling.infrastructure.persistent.po.UserLocationTags
 */
+
+@Mapper
 public interface UserLocationTagsMapper {
 
     int deleteByPrimaryKey(Long id);
@@ -22,4 +25,5 @@ public interface UserLocationTagsMapper {
 
     int updateByPrimaryKey(UserLocationTags record);
 
+    UserLocationTags selectByUserAndName(String userId, String tagName);
 }

@@ -15,17 +15,6 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class LocationTagServiceImpl implements ILocationTagService {
     private final ILocationTagRepository locationTagRepository;
-    private final IUserLocationService userLocationService;
-    @Override
-    public String resolveLocationTag(LocationCandidateVO candidate) {
-        if (Boolean.TRUE.equals(candidate.getIsCustom()) && candidate.getCustomTag() != null) {
-            return userLocationService.resolveToSystemTag(candidate.getCustomTag())
-                                      .map(LocationTagEntity::getLocationTagId)
-                                      .orElse(null); // TODO: throw error/log warning
-        }
-
-        return this.findOrCreate(candidate);
-    }
     @Override
     public String findOrCreate(LocationCandidateVO candidate) {
         Optional<LocationTagEntity> existing = this.findExisting(candidate);

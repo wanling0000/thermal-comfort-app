@@ -1,14 +1,12 @@
 package com.wanling.trigger.api.dto;
 
-import lombok.Data;
+public record EnvironmentalReadingDTO(
+        String readingId,
+        Long timestamp,
+        Double temperature,
+        Double humidity,
+        Double battery,
+        String sensorId,
+        LocationDTO location
+) {}
 
-@Data
-public class EnvironmentalReadingDTO {
-    private String readingId;
-    private Long timestamp; // Unix milliseconds
-    private Double temperature;
-    private Double humidity;
-    private Double battery;
-    private String sensorId;
-    private LocationDTO location;
-}

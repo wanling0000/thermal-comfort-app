@@ -23,4 +23,8 @@ public class LocationCandidateVO {
     private Double longitude;
     private Boolean isCustom;
     private String customTag; // 对于 isCustom=true 的情况
+
+    public Boolean isCustom() {
+        return isCustom;
+    }
 }

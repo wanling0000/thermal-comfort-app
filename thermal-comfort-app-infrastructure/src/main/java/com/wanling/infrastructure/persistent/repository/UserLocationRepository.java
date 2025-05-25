@@ -44,10 +44,6 @@ public class UserLocationRepository implements IUserLocationRepository {
         po.setNote(tagEntity.getNote());
         po.setRelatedLocationTagId(tagEntity.getRelatedLocationTagId());
 
-        if (tagEntity.getLatitude() != null && tagEntity.getLongitude() != null) {
-            po.setCoordinates(String.format("POINT(%f %f)", tagEntity.getLongitude(), tagEntity.getLatitude()));
-        }
-
         po.setCreatedAt(LocalDateTime.now());
 
         userLocationTagsMapper.insert(po);
@@ -77,5 +73,20 @@ public class UserLocationRepository implements IUserLocationRepository {
                                                     .build();
 
         return Optional.of(entity);
+    }
+
+    @Override
+    public Optional<UserLocationTagEntity> findByUserAndName(String userId, String tagName) {
+        UserLocationTags po = userLocationTagsMapper.selectByUserAndName(userId, tagName);
+        if (po == null) return Optional.empty();
+
+        return Optional.of(UserLocationTagEntity.builder()
+                                                .userLocationTagId(po.getUserLocationTagId())
+                                                .userId(po.getUserId())
+                                                .name(po.getName())
+                                                .latitude(po.getLatitude())
+                                                .longitude(po.getLongitude())
+                                                .relatedLocationTagId(po.getRelatedLocationTagId())
+                                                .build());
     }
 }

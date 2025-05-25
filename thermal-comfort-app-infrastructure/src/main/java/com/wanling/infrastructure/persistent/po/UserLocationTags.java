@@ -43,6 +43,7 @@ public class UserLocationTags implements Serializable {
     /**
      * 
      */
+    @TableField(exist = false)
     private Object coordinates;
 
     /**

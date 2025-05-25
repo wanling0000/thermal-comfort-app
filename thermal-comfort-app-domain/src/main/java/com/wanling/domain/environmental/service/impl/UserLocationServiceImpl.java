@@ -55,4 +55,9 @@ public class UserLocationServiceImpl implements IUserLocationService {
     public Optional<LocationTagEntity> resolveToSystemTag(String userLocationTagId) {
         return userLocationRepository.resolveToSystemTag(userLocationTagId);
     }
+
+    @Override
+    public Optional<UserLocationTagEntity> findByUserAndName(String userId, String tagName) {
+        return userLocationRepository.findByUserAndName(userId, tagName);
+    }
 }

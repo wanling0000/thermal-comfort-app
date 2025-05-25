@@ -33,40 +33,39 @@
         delete from user_location_tags
         where  user_location_tag_id = #{user_location_tag_id,jdbcType=VARCHAR} 
     </delete>
-    <insert id="insert" keyColumn="user_location_tag_id" keyProperty="user_location_tag_id" parameterType="com.wanling.infrastructure.persistent.po.UserLocationTags" useGeneratedKeys="true">
+    <insert id="insert" keyColumn="user_location_tag_id" keyProperty="user_location_tag_id" parameterType="com.wanling.infrastructure.persistent.po.UserLocationTags">
         insert into user_location_tags
         ( user_location_tag_id,user_id,name
-        ,latitude,longitude,coordinates
-        ,related_location_tag_id,note,created_at
+        ,latitude,longitude,related_location_tag_id,note,created_at
         )
-        values (#{user_location_tag_id,jdbcType=VARCHAR},#{user_id,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR}
-        ,#{latitude,jdbcType=DOUBLE},#{longitude,jdbcType=DOUBLE},#{coordinates,jdbcType=OTHER}
-        ,#{related_location_tag_id,jdbcType=VARCHAR},#{note,jdbcType=VARCHAR},#{created_at,jdbcType=TIMESTAMP}
+        values (#{userLocationTagId,jdbcType=VARCHAR},#{userId,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR}
+        ,#{latitude,jdbcType=DOUBLE},#{longitude,jdbcType=DOUBLE}
+        ,#{relatedLocationTagId,jdbcType=VARCHAR},#{note,jdbcType=VARCHAR},#{createdAt,jdbcType=TIMESTAMP}
         )
     </insert>
     <insert id="insertSelective" keyColumn="user_location_tag_id" keyProperty="user_location_tag_id" parameterType="com.wanling.infrastructure.persistent.po.UserLocationTags" useGeneratedKeys="true">
         insert into user_location_tags
         <trim prefix="(" suffix=")" suffixOverrides=",">
-                <if test="user_location_tag_id != null">user_location_tag_id,</if>
+                <if test="userLocationTagId != null">user_location_tag_id,</if>
                 <if test="user_id != null">user_id,</if>
                 <if test="name != null">name,</if>
                 <if test="latitude != null">latitude,</if>
                 <if test="longitude != null">longitude,</if>
                 <if test="coordinates != null">coordinates,</if>
-                <if test="related_location_tag_id != null">related_location_tag_id,</if>
+                <if test="relatedLocationTagId != null">related_location_tag_id,</if>
                 <if test="note != null">note,</if>
-                <if test="created_at != null">created_at,</if>
+                <if test="createdAt != null">created_at,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-                <if test="user_location_tag_id != null">#{user_location_tag_id,jdbcType=VARCHAR},</if>
-                <if test="user_id != null">#{user_id,jdbcType=VARCHAR},</if>
+                <if test="userLocationTagId != null">#{userLocationTagId,jdbcType=VARCHAR},</if>
+                <if test="user_id != null">#{userId,jdbcType=VARCHAR},</if>
                 <if test="name != null">#{name,jdbcType=VARCHAR},</if>
                 <if test="latitude != null">#{latitude,jdbcType=DOUBLE},</if>
                 <if test="longitude != null">#{longitude,jdbcType=DOUBLE},</if>
                 <if test="coordinates != null">#{coordinates,jdbcType=OTHER},</if>
-                <if test="related_location_tag_id != null">#{related_location_tag_id,jdbcType=VARCHAR},</if>
+                <if test="related_location_tag_id != null">#{relatedLocationTagId,jdbcType=VARCHAR},</if>
                 <if test="note != null">#{note,jdbcType=VARCHAR},</if>
-                <if test="created_at != null">#{created_at,jdbcType=TIMESTAMP},</if>
+                <if test="created_at != null">#{createdAt,jdbcType=TIMESTAMP},</if>
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.UserLocationTags">
@@ -112,4 +111,10 @@
             created_at =  #{created_at,jdbcType=TIMESTAMP}
         where   user_location_tag_id = #{user_location_tag_id,jdbcType=VARCHAR} 
     </update>
+    <select id="selectByUserAndName" resultType="com.wanling.infrastructure.persistent.po.UserLocationTags">
+        SELECT * FROM user_location_tags
+        WHERE user_id = #{userId} AND name = #{tagName}
+        LIMIT 1
+    </select>
+
 </mapper>

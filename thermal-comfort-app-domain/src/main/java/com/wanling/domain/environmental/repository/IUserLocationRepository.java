@@ -17,4 +17,6 @@ public interface IUserLocationRepository {
     void insertUserLocationTag(UserLocationTagEntity tagEntity);
 
     Optional<LocationTagEntity> resolveToSystemTag(String userLocationTagId);
+
+    Optional<UserLocationTagEntity> findByUserAndName(String userId, String tagName);
 }

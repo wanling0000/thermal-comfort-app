@@ -13,14 +13,14 @@ public class EnvironmentalReadingAssembler {
     public static EnvironmentalReadingEntity toEntity(EnvironmentalReadingDTO dto) {
         LocationCandidateVO candidate = null;
 
-        if (dto.getLocation() != null) {
-            LocationDTO loc = dto.getLocation();
+        if (dto.location() != null) {
+            LocationDTO loc = dto.location();
             candidate = LocationCandidateVO.builder()
-                                         .displayName(loc.getDisplayName())
-                                         .latitude(loc.getLatitude())
-                                         .longitude(loc.getLongitude())
-                                         .isCustom(Boolean.TRUE.equals(loc.getIsCustom()))
-                                         .customTag(loc.getCustomTag())
+                                         .displayName(loc.displayName())
+                                         .latitude(loc.latitude())
+                                         .longitude(loc.longitude())
+                                         .isCustom(Boolean.TRUE.equals(loc.isCustom()))
+                                         .customTag(loc.customTag())
                                          .build();
         }
 
@@ -29,13 +29,13 @@ public class EnvironmentalReadingAssembler {
                 : null;
 
         return EnvironmentalReadingEntity.builder()
-                                         .readingId(dto.getReadingId())
-                                         .timestamp(LocalDateTime.ofInstant(Instant.ofEpochMilli(dto.getTimestamp()), ZoneId.systemDefault()))
-                                         .temperature(dto.getTemperature())
-                                         .humidity(dto.getHumidity())
-                                         .battery(dto.getBattery())
-                                         .sensorId(dto.getSensorId())
-                                         .location(candidate) // 关键字段
+                                         .readingId(dto.readingId())
+                                         .timestamp(LocalDateTime.ofInstant(Instant.ofEpochMilli(dto.timestamp()), ZoneId.systemDefault()))
+                                         .temperature(dto.temperature())
+                                         .humidity(dto.humidity())
+                                         .battery(dto.battery())
+                                         .sensorId(dto.sensorId())
+                                         .location(candidate)
                                          .rawCoordinates(coordinates)
                                          .build();
     }

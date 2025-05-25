@@ -6,11 +6,11 @@ public class LocationAssembler {
 
     public static LocationCandidateVO toCandidate(LocationDTO dto) {
         return LocationCandidateVO.builder()
-                                .displayName(dto.getDisplayName())
-                                .latitude(dto.getLatitude())
-                                .longitude(dto.getLongitude())
-                                .isCustom(Boolean.TRUE.equals(dto.getIsCustom()))
-                                .customTag(dto.getCustomTag())
-                                .build();
+                                  .displayName(dto.displayName())
+                                  .latitude(dto.latitude())
+                                  .longitude(dto.longitude())
+                                  .isCustom(Boolean.TRUE.equals(dto.isCustom()))
+                                  .customTag(dto.customTag())
+                                  .build();
     }
 }

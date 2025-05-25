@@ -3,6 +3,7 @@ package com.wanling.domain.environmental.service;
 import java.util.Optional;
 
 import com.wanling.domain.environmental.model.entity.LocationTagEntity;
+import com.wanling.domain.environmental.model.entity.UserLocationTagEntity;
 import com.wanling.domain.environmental.model.valobj.LocationCandidateVO;
 
 public interface IUserLocationService {
@@ -20,4 +21,6 @@ public interface IUserLocationService {
      * Resolve the system tag associated with a user tag
      */
     Optional<LocationTagEntity> resolveToSystemTag(String userLocationTagId);
+
+    Optional<UserLocationTagEntity> findByUserAndName(String userId, String tagName);
 }

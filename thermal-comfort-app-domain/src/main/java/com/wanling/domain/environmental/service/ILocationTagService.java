@@ -33,18 +33,18 @@ public interface ILocationTagService {
      */
     Optional<LocationTagEntity> findExisting(LocationCandidateVO candidate);
 
-    /**
-     * Resolve the correct location_tag_id for a given location candidate.
-     *
-     * This is the preferred entry point for any domain logic that needs to
-     * associate a location with an entity (e.g. reading, feedback).
-     *
-     * - If the location is marked as custom and has a customTag ID,
-     *   this will resolve its mapped system tag (via UserLocationService).
-     * - Otherwise, it will attempt to find or create a tag using findOrCreate().
-     *
-     * @param candidate The location data, possibly from the frontend.
-     * @return The resolved location_tag_id.
-     */
-    String resolveLocationTag(LocationCandidateVO candidate);
+//    /**
+//     * Resolve the correct location_tag_id for a given location candidate.
+//     *
+//     * This is the preferred entry point for any domain logic that needs to
+//     * associate a location with an entity (e.g. reading, feedback).
+//     *
+//     * - If the location is marked as custom and has a customTag ID,
+//     *   this will resolve its mapped system tag (via UserLocationService).
+//     * - Otherwise, it will attempt to find or create a tag using findOrCreate().
+//     *
+//     * @param candidate The location data, possibly from the frontend.
+//     * @return The resolved location_tag_id.
+//     */
+//    String resolveLocationTag(LocationCandidateVO candidate);
 }
