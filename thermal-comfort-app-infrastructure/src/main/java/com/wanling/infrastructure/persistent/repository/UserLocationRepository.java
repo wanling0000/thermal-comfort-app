@@ -56,7 +56,7 @@ public class UserLocationRepository implements IUserLocationRepository {
             return Optional.empty();
         }
 
-        LocationTags locationTag = locationTagsMapper.selectByPrimaryKey(userTag.getRelatedLocationTagId());
+        LocationTags locationTag = locationTagsMapper.findById(userTag.getRelatedLocationTagId());
         if (locationTag == null) {
             return Optional.empty();
         }
@@ -87,6 +87,21 @@ public class UserLocationRepository implements IUserLocationRepository {
                                                 .latitude(po.getLatitude())
                                                 .longitude(po.getLongitude())
                                                 .relatedLocationTagId(po.getRelatedLocationTagId())
+                                                .build());
+    }
+
+    @Override
+    public Optional<UserLocationTagEntity> findById(String userLocationTagId) {
+        UserLocationTags po = userLocationTagsMapper.findById(userLocationTagId);
+        if (po == null) return Optional.empty();
+        return Optional.of(UserLocationTagEntity.builder()
+                                                .userLocationTagId(po.getUserLocationTagId())
+                                                .userId(po.getUserId())
+                                                .name(po.getName())
+                                                .latitude(po.getLatitude())
+                                                .longitude(po.getLongitude())
+                                                .relatedLocationTagId(po.getRelatedLocationTagId())
+                                                .note(po.getNote())
                                                 .build());
     }
 }

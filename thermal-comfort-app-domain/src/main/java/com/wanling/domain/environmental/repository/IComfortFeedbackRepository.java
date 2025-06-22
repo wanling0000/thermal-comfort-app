@@ -1,6 +1,7 @@
 package com.wanling.domain.environmental.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
 
@@ -14,4 +15,7 @@ import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
  */
 public interface IComfortFeedbackRepository {
     void saveFeedback(ComfortFeedbackEntity entity);
+    List<ComfortFeedbackEntity> findAllByUserIdOrderByTimestampDesc(String userId);
+
+    Optional<ComfortFeedbackEntity> findLatestByUserId(String userId);
 }

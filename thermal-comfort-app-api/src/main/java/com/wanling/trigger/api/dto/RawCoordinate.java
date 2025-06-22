@@ -1,9 +1,6 @@
 package com.wanling.trigger.api.dto;
 
-import lombok.Data;
+import lombok.Builder;
 
-@Data
-public class RawCoordinate {
-    private double latitude;
-    private double longitude;
-}
+@Builder
+public record RawCoordinate(Double latitude, Double longitude) {}

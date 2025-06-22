@@ -117,6 +117,13 @@
                 <version>1.2.83</version>
             </dependency>
 
+            <!--  Geo 类型库 -->
+            <dependency>
+                <groupId>org.locationtech.jts</groupId>
+                <artifactId>jts-core</artifactId>
+                <version>1.19.0</version>
+            </dependency>
+
             <!-- 工程模块 -->
             <dependency>
                 <groupId>com.wanling</groupId>

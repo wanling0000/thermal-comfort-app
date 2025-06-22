@@ -35,6 +35,6 @@ public class ComfortFeedbackEntity {
     private Optional<String> userLocationTagId;
 
     private String readingId;
-    private double rawLatitude;
-    private double rawLongitude;
+    private Optional<Double> rawLatitude;
+    private Optional<Double> rawLongitude;
 }

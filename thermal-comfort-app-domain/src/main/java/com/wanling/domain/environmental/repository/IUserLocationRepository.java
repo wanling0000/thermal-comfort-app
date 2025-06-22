@@ -19,4 +19,6 @@ public interface IUserLocationRepository {
     Optional<LocationTagEntity> resolveToSystemTag(String userLocationTagId);
 
     Optional<UserLocationTagEntity> findByUserAndName(String userId, String tagName);
+
+    Optional<UserLocationTagEntity> findById(String userLocationTagId);
 }

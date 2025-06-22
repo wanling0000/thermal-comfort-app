@@ -26,4 +26,6 @@ public interface UserLocationTagsMapper {
     int updateByPrimaryKey(UserLocationTags record);
 
     UserLocationTags selectByUserAndName(String userId, String tagName);
+
+    UserLocationTags findById(String userLocationTagId);
 }

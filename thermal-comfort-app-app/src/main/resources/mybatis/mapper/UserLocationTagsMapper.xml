@@ -116,5 +116,11 @@
         WHERE user_id = #{userId} AND name = #{tagName}
         LIMIT 1
     </select>
+    <select id="findById"
+            resultType="com.wanling.infrastructure.persistent.po.UserLocationTags">
+        SELECT * FROM user_location_tags
+        WHERE user_location_tag_id = #{id}
+    </select>
+
 
 </mapper>

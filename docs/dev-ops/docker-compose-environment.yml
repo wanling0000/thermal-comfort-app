@@ -1,4 +1,4 @@
-# 命令执行 docker-compose -f docker-compose-environment.yml up -d
+# docker-compose -f docker-compose-environment.yml up -d
 version: '3.9'
 services:
   mysql:
@@ -7,7 +7,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      TZ: Asia/Shanghai
+      TZ: Europe/Dublin
       MYSQL_ROOT_PASSWORD: 123456
     networks:
       - my-network
@@ -26,7 +26,7 @@ services:
     volumes_from:
       - mysql-job-dbdata
 
-  # 自动加载数据
+  # Automatic data loading
   mysql-job-dbdata:
     image: alpine:3.18.2
     container_name: mysql-job-dbdata

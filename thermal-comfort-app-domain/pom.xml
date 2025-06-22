@@ -30,6 +30,11 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
         </dependency>
+        <!--  Geo 类型库 -->
+        <dependency>
+            <groupId>org.locationtech.jts</groupId>
+            <artifactId>jts-core</artifactId>
+        </dependency>
         <!-- 系统模块 -->
         <dependency>
             <groupId>com.wanling</groupId>

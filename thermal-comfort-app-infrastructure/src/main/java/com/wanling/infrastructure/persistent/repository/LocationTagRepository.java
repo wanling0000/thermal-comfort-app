@@ -9,7 +9,6 @@ import com.wanling.domain.environmental.repository.ILocationTagRepository;
 import com.wanling.infrastructure.persistent.mapper.LocationTagsMapper;
 import com.wanling.infrastructure.persistent.po.LocationTags;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Repository;
 
@@ -45,5 +44,19 @@ public class LocationTagRepository implements ILocationTagRepository {
         BeanUtils.copyProperties(entity, po);
         locationTagsMapper.insertLocationTag(po);
         log.info("✅ Inserted new location tag: {}", entity.getDisplayName());
+    }
+
+    @Override
+    public Optional<LocationTagEntity> findById(String locationTagId) {
+        LocationTags po = locationTagsMapper.findById(locationTagId);
+        if (po == null) return Optional.empty();
+        return Optional.of(LocationTagEntity.builder()
+                                            .locationTagId(po.getLocationTagId())
+                                            .displayName(po.getDisplayName())
+                                            .latitude(po.getLatitude())
+                                            .longitude(po.getLongitude())
+                                            .isCustom(po.getIsCustom())
+                                            .createdAt(String.valueOf(po.getCreatedAt()))
+                                            .build());
     }
 }

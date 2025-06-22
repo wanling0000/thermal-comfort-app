@@ -6,10 +6,13 @@ import java.util.UUID;
 
 import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
 import com.wanling.domain.environmental.model.entity.EnvironmentalReadingEntity;
+import com.wanling.domain.environmental.model.entity.LocationTagEntity;
 import com.wanling.domain.environmental.model.entity.UserLocationTagEntity;
 import com.wanling.domain.environmental.model.valobj.LocationCandidateVO;
 import com.wanling.domain.environmental.repository.IComfortFeedbackRepository;
 import com.wanling.domain.environmental.repository.IEnvironmentalReadingRepository;
+import com.wanling.domain.environmental.repository.ILocationTagRepository;
+import com.wanling.domain.environmental.repository.IUserLocationRepository;
 import com.wanling.domain.environmental.service.IComfortFeedbackService;
 import com.wanling.domain.environmental.service.ILocationTagService;
 import com.wanling.domain.environmental.service.IUserLocationService;
@@ -35,6 +38,8 @@ public class ComfortFeedbackService implements IComfortFeedbackService {
     private final ILocationTagService locationTagService;
     private final IUserLocationService userLocationService;
     private final IEnvironmentalReadingRepository readingRepository;
+    private final ILocationTagRepository locationTagRepository;
+    private final IUserLocationRepository userLocationRepository;
     @Override
     public void handleFeedbackWithReading(ComfortFeedbackEntity feedback, EnvironmentalReadingEntity reading) {
         String feedbackId = feedback.getFeedbackId() != null
@@ -49,7 +54,7 @@ public class ComfortFeedbackService implements IComfortFeedbackService {
         String userLocationTagId = null;
         String locationTagId;
 
-// 2: If location is custom, try to reuse existing user tag
+        // 2: If location is custom, try to reuse existing user tag
         if (loc.isCustom() != null && loc.isCustom() && loc.getCustomTag() != null) {
             String tagName = loc.getCustomTag();
             Optional<UserLocationTagEntity> existing = userLocationService.findByUserAndName(userId, tagName);
@@ -81,5 +86,88 @@ public class ComfortFeedbackService implements IComfortFeedbackService {
         feedbackRepository.saveFeedback(completed);
 
         log.info("Feedback and reading saved. FeedbackId={}, ReadingId={}", feedbackId, reading.getReadingId());
+    }
+
+    public List<ComfortFeedbackEntity> getAllFeedback() {
+        String userId = "admin";
+        List<ComfortFeedbackEntity> comfortFeedbackEntityList = feedbackRepository.findAllByUserIdOrderByTimestampDesc(userId);
+        return comfortFeedbackEntityList.stream()
+                                        .map(e -> {
+                                            final String[] displayName = {"(unknown location)"};
+                                            final Optional<String>[] customName = new Optional[]{Optional.empty()};
+
+                                            // 查系统标签 displayName
+                                            locationTagRepository.findById(e.getLocationTagId()).ifPresent(tag -> {
+                                                if (tag.getDisplayName() != null) {
+                                                    displayName[0] = tag.getDisplayName();
+                                                }
+                                            });
+
+                                            // 查用户自定义标签（如果有）——只设置 customTagName，不覆盖 displayName
+                                            e.getUserLocationTagId().ifPresent(userLocationTagId -> {
+                                                userLocationRepository.findById(userLocationTagId).ifPresent(userTag -> {
+                                                    if (userTag.getName() != null) {
+                                                        customName[0] = Optional.of(userTag.getName());
+                                                    }
+                                                });
+                                            });
+
+                                            return ComfortFeedbackEntity.builder()
+                                                                        .feedbackId(e.getFeedbackId())
+                                                                        .userId(e.getUserId())
+                                                                        .timestamp(e.getTimestamp())
+                                                                        .comfortLevel(e.getComfortLevel())
+                                                                        .feedbackType(e.getFeedbackType())
+                                                                        .activityTypeId(e.getActivityTypeId())
+                                                                        .clothingLevel(e.getClothingLevel())
+                                                                        .adjustedTempLevel(e.getAdjustedTempLevel())
+                                                                        .adjustedHumidLevel(e.getAdjustedHumidLevel())
+                                                                        .notes(e.getNotes())
+                                                                        .locationTagId(e.getLocationTagId())
+                                                                        .userLocationTagId(e.getUserLocationTagId())
+                                                                        .readingId(e.getReadingId())
+                                                                        .rawLatitude(e.getRawLatitude())
+                                                                        .rawLongitude(e.getRawLongitude())
+                                                                        .locationDisplayName(displayName[0])
+                                                                        .isCustomLocation(e.isCustomLocation())
+                                                                        .customTagName(customName[0])
+                                                                        .build();
+                                        })
+                                        .toList();
+    }
+
+    @Override
+    public ComfortFeedbackEntity findLatestFeedbackForCurrentUser() {
+        String userId = "admin";
+        Optional<ComfortFeedbackEntity> optional = feedbackRepository.findLatestByUserId(userId);
+
+        if (optional.isEmpty()) {
+            throw new RuntimeException("Has no feedback record");
+        }
+        ComfortFeedbackEntity e = optional.get();
+
+        final String[] displayName = {"(unknown location)"};
+        final Optional<String>[] customName = new Optional[]{Optional.empty()};
+
+        // 查系统标签 displayName
+        locationTagRepository.findById(e.getLocationTagId()).ifPresent(tag -> {
+            if (tag.getDisplayName() != null) {
+                displayName[0] = tag.getDisplayName();
+            }
+        });
+
+        // 查用户自定义标签（如果有）——只设置 customTagName，不覆盖 displayName
+        e.getUserLocationTagId().ifPresent(userLocationTagId -> {
+            userLocationRepository.findById(userLocationTagId).ifPresent(userTag -> {
+                if (userTag.getName() != null) {
+                    customName[0] = Optional.of(userTag.getName());
+                }
+            });
+        });
+
+        return e.toBuilder()
+                .locationDisplayName(displayName[0])
+                .customTagName(customName[0])
+                .build();
     }
 }

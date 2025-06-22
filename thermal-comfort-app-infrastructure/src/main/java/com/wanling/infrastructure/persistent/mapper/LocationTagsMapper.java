@@ -19,7 +19,7 @@ public interface LocationTagsMapper {
 
     int insertSelective(LocationTags record);
 
-    LocationTags selectByPrimaryKey(@Param("location_tag_id") String id);
+    LocationTags findById(@Param("location_tag_id") String id);
 
     int updateByPrimaryKeySelective(LocationTags record);
 

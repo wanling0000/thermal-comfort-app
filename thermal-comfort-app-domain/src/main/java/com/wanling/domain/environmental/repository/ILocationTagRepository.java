@@ -15,4 +15,6 @@ import com.wanling.domain.environmental.model.entity.LocationTagEntity;
 public interface ILocationTagRepository {
     Optional<LocationTagEntity> findNearbyWithSameName(String name, double lat, double lng, double radiusMeters);
     void insertLocationTag(LocationTagEntity entity);
+
+    Optional<LocationTagEntity> findById(String locationTagId);
 }

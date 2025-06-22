@@ -76,9 +76,9 @@ public class ComfortFeedback implements Serializable {
     private String readingId;
 
     /**
-     * 
+     * geometry(Point, 4326)
      */
-    private Object rawCoordinates;
+    private String rawCoordinates;
 
     /**
      * 
