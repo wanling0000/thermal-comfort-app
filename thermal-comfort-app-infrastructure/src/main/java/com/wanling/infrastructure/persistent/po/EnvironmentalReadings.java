@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Objects;
 import java.util.UUID;
 
 import lombok.Data;
@@ -48,6 +49,8 @@ public class EnvironmentalReadings implements Serializable {
      */
     private String locationTagId;
 
+    private String userId;
+
     /**
      * Actual GPS coordinates where the reading occurred
      */
@@ -57,55 +60,31 @@ public class EnvironmentalReadings implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Override
-    public boolean equals(Object that) {
-        if (this == that) {
+    public boolean equals(Object o) {
+        if (this == o)
             return true;
-        }
-        if (that == null) {
+        if (o == null || getClass() != o.getClass())
             return false;
-        }
-        if (getClass() != that.getClass()) {
-            return false;
-        }
-        EnvironmentalReadings other = (EnvironmentalReadings) that;
-        return (this.getReadingId() == null ? other.getReadingId() == null : this.getReadingId().equals(other.getReadingId()))
-            && (this.getTimestamp() == null ? other.getTimestamp() == null : this.getTimestamp().equals(other.getTimestamp()))
-            && (this.getTemperature() == null ? other.getTemperature() == null : this.getTemperature().equals(other.getTemperature()))
-            && (this.getHumidity() == null ? other.getHumidity() == null : this.getHumidity().equals(other.getHumidity()))
-            && (this.getSensorId() == null ? other.getSensorId() == null : this.getSensorId().equals(other.getSensorId()))
-            && (this.getLocationTagId() == null ? other.getLocationTagId() == null : this.getLocationTagId().equals(other.getLocationTagId()))
-            && (this.getRawCoordinates() == null ? other.getRawCoordinates() == null : this.getRawCoordinates().equals(other.getRawCoordinates()));
+        EnvironmentalReadings that = (EnvironmentalReadings) o;
+        return Objects.equals(readingId, that.readingId) && Objects.equals(timestamp, that.timestamp) && Objects.equals(temperature, that.temperature) && Objects.equals(humidity, that.humidity) && Objects.equals(sensorId, that.sensorId) && Objects.equals(locationTagId, that.locationTagId) && Objects.equals(userId, that.userId) && Objects.equals(rawCoordinates, that.rawCoordinates);
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((getReadingId() == null) ? 0 : getReadingId().hashCode());
-        result = prime * result + ((getTimestamp() == null) ? 0 : getTimestamp().hashCode());
-        result = prime * result + ((getTemperature() == null) ? 0 : getTemperature().hashCode());
-        result = prime * result + ((getHumidity() == null) ? 0 : getHumidity().hashCode());
-        result = prime * result + ((getSensorId() == null) ? 0 : getSensorId().hashCode());
-        result = prime * result + ((getLocationTagId() == null) ? 0 : getLocationTagId().hashCode());
-        result = prime * result + ((getRawCoordinates() == null) ? 0 : getRawCoordinates().hashCode());
-        return result;
+        return Objects.hash(readingId, timestamp, temperature, humidity, sensorId, locationTagId, userId, rawCoordinates);
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", reading_id=").append(readingId);
-        sb.append(", timestamp=").append(timestamp);
-        sb.append(", temperature=").append(temperature);
-        sb.append(", humidity=").append(humidity);
-        sb.append(", sensor_id=").append(sensorId);
-        sb.append(", location_tag_id=").append(locationTagId);
-        sb.append(", raw_coordinates=").append(rawCoordinates);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return "EnvironmentalReadings{" +
+                "readingId='" + readingId + '\'' +
+                ", timestamp=" + timestamp +
+                ", temperature=" + temperature +
+                ", humidity=" + humidity +
+                ", sensorId='" + sensorId + '\'' +
+                ", locationTagId='" + locationTagId + '\'' +
+                ", userId='" + userId + '\'' +
+                ", rawCoordinates='" + rawCoordinates + '\'' +
+                '}';
     }
 }

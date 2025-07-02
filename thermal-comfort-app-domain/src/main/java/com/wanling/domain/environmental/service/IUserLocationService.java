@@ -1,10 +1,12 @@
 package com.wanling.domain.environmental.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.wanling.domain.environmental.model.entity.LocationTagEntity;
 import com.wanling.domain.environmental.model.entity.UserLocationTagEntity;
 import com.wanling.domain.environmental.model.valobj.LocationCandidateVO;
+import com.wanling.domain.environmental.model.valobj.LocationPreviewVO;
 
 public interface IUserLocationService {
 
@@ -23,4 +25,6 @@ public interface IUserLocationService {
     Optional<LocationTagEntity> resolveToSystemTag(String userLocationTagId);
 
     Optional<UserLocationTagEntity> findByUserAndName(String userId, String tagName);
+
+    List<LocationPreviewVO> findAllByUserId(String userId);
 }

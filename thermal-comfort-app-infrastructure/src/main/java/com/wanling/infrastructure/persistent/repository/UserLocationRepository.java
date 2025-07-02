@@ -1,6 +1,7 @@
 package com.wanling.infrastructure.persistent.repository;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 import javax.annotation.Resource;
@@ -15,14 +16,6 @@ import com.wanling.infrastructure.persistent.po.UserLocationTags;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
-/**
- * @Author
- * fwl
- * @Description
- * @Date
- * 21/05/2025
- * 12:34
- */
 
 @Slf4j
 @Repository
@@ -103,5 +96,23 @@ public class UserLocationRepository implements IUserLocationRepository {
                                                 .relatedLocationTagId(po.getRelatedLocationTagId())
                                                 .note(po.getNote())
                                                 .build());
+    }
+
+    @Override
+    public List<UserLocationTagEntity> findByUserId(String userId) {
+        List<UserLocationTags> pos = userLocationTagsMapper.findByUserId(userId);
+
+        return pos.stream()
+                  .map(po -> UserLocationTagEntity.builder()
+                                                  .userLocationTagId(po.getUserLocationTagId())
+                                                  .userId(po.getUserId())
+                                                  .name(po.getName())
+                                                  .latitude(po.getLatitude())
+                                                  .longitude(po.getLongitude())
+                                                  .relatedLocationTagId(po.getRelatedLocationTagId())
+                                                  .note(po.getNote())
+                                                  .createdAt(po.getCreatedAt() != null ? po.getCreatedAt().toString() : null)
+                                                  .build())
+                  .toList();
     }
 }

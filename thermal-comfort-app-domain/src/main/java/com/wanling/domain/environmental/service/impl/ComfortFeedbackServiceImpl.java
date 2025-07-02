@@ -6,7 +6,6 @@ import java.util.UUID;
 
 import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
 import com.wanling.domain.environmental.model.entity.EnvironmentalReadingEntity;
-import com.wanling.domain.environmental.model.entity.LocationTagEntity;
 import com.wanling.domain.environmental.model.entity.UserLocationTagEntity;
 import com.wanling.domain.environmental.model.valobj.LocationCandidateVO;
 import com.wanling.domain.environmental.repository.IComfortFeedbackRepository;
@@ -19,7 +18,6 @@ import com.wanling.domain.environmental.service.IUserLocationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 /**
  * @Author
@@ -33,7 +31,7 @@ import org.springframework.util.StringUtils;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class ComfortFeedbackService implements IComfortFeedbackService {
+public class ComfortFeedbackServiceImpl implements IComfortFeedbackService {
     private final IComfortFeedbackRepository feedbackRepository;
     private final ILocationTagService locationTagService;
     private final IUserLocationService userLocationService;
@@ -71,6 +69,7 @@ public class ComfortFeedbackService implements IComfortFeedbackService {
         }
 
         // 3: Save the reading with associated location
+        reading.setUserId(userId);
         reading.setLocationTagId(locationTagId);
         readingRepository.saveEnvironmentalReadings(List.of(reading));
 

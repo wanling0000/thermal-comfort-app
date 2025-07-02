@@ -1,6 +1,7 @@
 package com.wanling.infrastructure.persistent.mapper;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 import com.wanling.infrastructure.persistent.po.EnvironmentalReadings;
@@ -28,4 +29,7 @@ public interface EnvironmentalReadingsMapper {
 
     int updateByPrimaryKey(EnvironmentalReadings record);
 
+    List<EnvironmentalReadings> findByUserIdAndTimeRange(String userId, LocalDateTime start, LocalDateTime end);
+
+    List<EnvironmentalReadings> findByReadingIds(List<String> readingIds);
 }

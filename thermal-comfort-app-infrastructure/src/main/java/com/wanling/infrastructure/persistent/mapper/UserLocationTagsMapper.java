@@ -1,5 +1,7 @@
 package com.wanling.infrastructure.persistent.mapper;
 
+import java.util.List;
+
 import com.wanling.infrastructure.persistent.po.UserLocationTags;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -28,4 +30,6 @@ public interface UserLocationTagsMapper {
     UserLocationTags selectByUserAndName(String userId, String tagName);
 
     UserLocationTags findById(String userLocationTagId);
+
+    List<UserLocationTags> findByUserId(String userId);
 }

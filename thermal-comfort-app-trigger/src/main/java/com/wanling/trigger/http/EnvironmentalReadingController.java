@@ -38,7 +38,7 @@ public class EnvironmentalReadingController implements IEnvironmentReading {
 
     @PostMapping("/upload")
     public Response<String> uploadReadings(@RequestBody List<EnvironmentalReadingDTO> dtoList) {
-        log.info("✅ Received readings from frontend: {}", JSON.toJSONString(dtoList));
+        log.debug("✅ Received readings from frontend: {}", JSON.toJSONString(dtoList));
 
         List<EnvironmentalReadingEntity> entities = dtoList.stream()
                                                            .map(EnvironmentalReadingAssembler::toEntity)

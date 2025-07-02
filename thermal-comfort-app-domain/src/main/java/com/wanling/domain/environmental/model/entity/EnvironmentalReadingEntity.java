@@ -25,6 +25,7 @@ public class EnvironmentalReadingEntity {
     private String sensorId;
     private String locationTagId;
     private String rawCoordinates;
+    private String userId;
 
     private LocationCandidateVO location; // value object, contains displayName + lat + lng + isCustom + customTag
 }

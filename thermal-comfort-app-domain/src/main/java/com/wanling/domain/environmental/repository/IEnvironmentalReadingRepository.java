@@ -15,4 +15,8 @@ import com.wanling.domain.environmental.model.entity.EnvironmentalReadingEntity;
  */
 public interface IEnvironmentalReadingRepository {
     void saveEnvironmentalReadings(List<EnvironmentalReadingEntity> readings);
+
+    List<EnvironmentalReadingEntity> findByUserIdAndTimeRange(String userId, LocalDateTime startOfDay, LocalDateTime endOfDay);
+
+    List<EnvironmentalReadingEntity> findByReadingIds(List<String> readingIds);
 }

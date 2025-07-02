@@ -1,5 +1,6 @@
 package com.wanling.domain.environmental.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.wanling.domain.environmental.model.entity.LocationTagEntity;
@@ -21,4 +22,6 @@ public interface IUserLocationRepository {
     Optional<UserLocationTagEntity> findByUserAndName(String userId, String tagName);
 
     Optional<UserLocationTagEntity> findById(String userLocationTagId);
+
+    List<UserLocationTagEntity> findByUserId(String userId);
 }

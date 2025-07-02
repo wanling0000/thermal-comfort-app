@@ -11,6 +11,7 @@
         <result property="humidity" column="humidity" jdbcType="DOUBLE"/>
         <result property="sensorId" column="sensor_id" jdbcType="VARCHAR"/>
         <result property="locationTagId" column="location_tag_id" jdbcType="VARCHAR"/>
+        <result property="userId" column="user_id" jdbcType="VARCHAR"/>
         <result property="rawCoordinates" column="raw_coordinates" jdbcType="VARCHAR"/>
     </resultMap>
 
@@ -26,6 +27,22 @@
         from environmental_readings
         where reading_id = #{reading_id, jdbcType=VARCHAR}
     </select>
+    <select id="findByUserIdAndTimeRange"
+            resultType="com.wanling.infrastructure.persistent.po.EnvironmentalReadings">
+        SELECT reading_id, timestamp, temperature, humidity
+        FROM environmental_readings
+        WHERE user_id = #{userId}
+          AND timestamp BETWEEN #{start} AND #{end}
+        ORDER BY timestamp ASC
+    </select>
+    <select id="findByReadingIds"
+            resultType="com.wanling.infrastructure.persistent.po.EnvironmentalReadings">
+        SELECT * FROM environmental_readings
+        WHERE reading_id IN
+        <foreach collection="readingIds" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
         delete from environmental_readings
@@ -39,12 +56,12 @@
         insert into environmental_readings (
             reading_id, timestamp, temperature,
             humidity, sensor_id,
-            location_tag_id, raw_coordinates
+            location_tag_id, user_id, raw_coordinates
         )
         values (
                    #{readingId, jdbcType=VARCHAR}, #{timestamp, jdbcType=TIMESTAMP}, #{temperature, jdbcType=DOUBLE},
                    #{humidity, jdbcType=DOUBLE}, #{sensorId, jdbcType=VARCHAR},
-                   #{locationTagId, jdbcType=VARCHAR}, ST_GeomFromText(#{rawCoordinates, jdbcType=VARCHAR}, 4326)
+                   #{locationTagId, jdbcType=VARCHAR},  #{userId, jdbcType=VARCHAR}, ST_GeomFromText(#{rawCoordinates, jdbcType=VARCHAR}, 4326)
                )
         on conflict (reading_id) do nothing
         ]]>
@@ -63,6 +80,7 @@
             <if test="sensor_id != null">sensor_id,</if>
             <if test="location_tag_id != null">location_tag_id,</if>
             <if test="raw_coordinates != null">raw_coordinates,</if>
+            <if test="user_id != null">user_id,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="reading_id != null">#{reading_id, jdbcType=VARCHAR},</if>
@@ -73,6 +91,7 @@
             <if test="sensor_id != null">#{sensor_id, jdbcType=VARCHAR},</if>
             <if test="location_tag_id != null">#{location_tag_id, jdbcType=VARCHAR},</if>
             <if test="raw_coordinates != null">#{raw_coordinates, jdbcType=VARCHAR},</if>
+            <if test="user_id != null">#{user_id, jdbcType=VARCHAR},</if>
         </trim>
     </insert>
 

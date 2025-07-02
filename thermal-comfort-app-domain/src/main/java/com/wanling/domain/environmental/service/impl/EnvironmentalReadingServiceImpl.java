@@ -22,7 +22,9 @@ public class EnvironmentalReadingServiceImpl implements IEnvironmentReadingServi
 
     @Override
     public void uploadReadings(List<EnvironmentalReadingEntity> readings) {
+        String userId = "admin"; // TODO: 暂时写死（之后从 token 里提取）
         for (EnvironmentalReadingEntity reading : readings) {
+            reading.setUserId(userId);
             LocationCandidateVO location = reading.getLocation();
 
             if (location == null) {
