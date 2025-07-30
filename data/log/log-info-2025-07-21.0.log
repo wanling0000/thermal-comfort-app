@@ -1,0 +1,414 @@
+25-07-21.00:03:02.937 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:03:02.947 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.00:03:05.151 [main            ] INFO  Application            - Starting Application using Java 17.0.8 on FWLMacBook-Pro.local with PID 46601 (/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app)
+25-07-21.00:03:05.152 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-21.00:03:05.668 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:03:05.668 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:03:05.796 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:03:05.799 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:03:05.825 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+25-07-21.00:03:06.293 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-21.00:03:06.297 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-0.0.0.0-8091"]
+25-07-21.00:03:06.297 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-21.00:03:06.298 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-21.00:03:06.344 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-21.00:03:06.344 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1171 ms
+25-07-21.00:03:06.563 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:03:06.573 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:03:06.579 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:03:06.584 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:03:06.587 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:03:06.591 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:03:06.610 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:03:06.750 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:03:06.761 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:03:06.832 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:03:06.842 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:03:06.996 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:03:07.341 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:03:07.374 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-0.0.0.0-8091"]
+25-07-21.00:03:07.381 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-21.00:03:07.389 [main            ] INFO  Application            - Started Application in 2.578 seconds (JVM running for 3.207)
+25-07-21.00:03:07.392 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:03:07.392 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:03:07.800 [RMI TCP Connection(3)-127.0.0.1] INFO  CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+25-07-21.00:03:07.801 [RMI TCP Connection(2)-127.0.0.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-21.00:03:07.801 [RMI TCP Connection(2)-127.0.0.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-21.00:03:07.802 [RMI TCP Connection(2)-127.0.0.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-21.00:03:07.851 [AMQP Connection 127.0.0.1:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Socket closed)
+25-07-21.00:03:07.853 [AMQP Connection 0:0:0:0:0:0:0:1:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Socket closed)
+25-07-21.00:03:07.854 [RMI TCP Connection(3)-127.0.0.1] WARN  RabbitHealthIndicator  - Rabbit health check failed
+org.springframework.amqp.AmqpAuthenticationException: com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:64)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:385)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1225)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 50 common frames omitted
+25-07-21.00:03:07.856 [RMI TCP Connection(3)-127.0.0.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.00:03:07.996 [RMI TCP Connection(3)-127.0.0.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.00:03:23.489 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:03:23.492 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.00:17:12.799 [main            ] INFO  Application            - Starting Application using Java 17.0.8 on FWLMacBook-Pro.local with PID 47261 (/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app)
+25-07-21.00:17:12.800 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-21.00:17:13.111 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:17:13.112 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:17:13.196 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:17:13.197 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:17:13.215 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-07-21.00:17:13.526 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-21.00:17:13.529 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-0.0.0.0-8091"]
+25-07-21.00:17:13.529 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-21.00:17:13.529 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-21.00:17:13.570 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-21.00:17:13.570 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 753 ms
+25-07-21.00:17:13.751 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:17:13.760 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:17:13.767 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:17:13.772 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:17:13.776 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:17:13.780 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:17:13.800 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:17:13.932 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:17:13.943 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:17:14.009 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:17:14.018 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:17:14.174 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:17:14.458 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:17:14.492 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-0.0.0.0-8091"]
+25-07-21.00:17:14.500 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-21.00:17:14.509 [main            ] INFO  Application            - Started Application in 1.912 seconds (JVM running for 2.175)
+25-07-21.00:17:14.511 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:17:14.511 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:17:15.147 [RMI TCP Connection(3)-127.0.0.1] INFO  CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+25-07-21.00:17:15.148 [RMI TCP Connection(2)-127.0.0.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-21.00:17:15.148 [RMI TCP Connection(2)-127.0.0.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-21.00:17:15.150 [RMI TCP Connection(2)-127.0.0.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-07-21.00:17:15.207 [AMQP Connection 127.0.0.1:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Socket closed)
+25-07-21.00:17:15.210 [AMQP Connection 0:0:0:0:0:0:0:1:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Socket closed)
+25-07-21.00:17:15.211 [RMI TCP Connection(3)-127.0.0.1] WARN  RabbitHealthIndicator  - Rabbit health check failed
+org.springframework.amqp.AmqpAuthenticationException: com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:64)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:385)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1225)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 50 common frames omitted
+25-07-21.00:17:15.213 [RMI TCP Connection(3)-127.0.0.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.00:17:15.355 [RMI TCP Connection(3)-127.0.0.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.00:22:57.972 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:22:57.976 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.00:23:34.993 [main            ] INFO  Application            - Starting Application using Java 17.0.8 on FWLMacBook-Pro.local with PID 47903 (/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app)
+25-07-21.00:23:34.994 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-21.00:23:35.340 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:23:35.340 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:23:35.428 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:23:35.429 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:23:35.445 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-07-21.00:23:35.815 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-21.00:23:35.819 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-0.0.0.0-8091"]
+25-07-21.00:23:35.819 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-21.00:23:35.819 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-21.00:23:35.862 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-21.00:23:35.862 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 842 ms
+25-07-21.00:23:36.060 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:23:36.069 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:23:36.075 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:23:36.080 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:23:36.084 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:23:36.088 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:23:36.114 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:23:36.265 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:23:36.283 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:23:36.374 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:23:36.384 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:23:36.560 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:23:36.921 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:23:36.958 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-0.0.0.0-8091"]
+25-07-21.00:23:36.968 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-21.00:23:36.978 [main            ] INFO  Application            - Started Application in 2.197 seconds (JVM running for 2.532)
+25-07-21.00:23:36.980 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:23:36.980 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:23:37.169 [RMI TCP Connection(2)-127.0.0.1] INFO  CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+25-07-21.00:23:37.172 [RMI TCP Connection(3)-127.0.0.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-21.00:23:37.172 [RMI TCP Connection(3)-127.0.0.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-21.00:23:37.174 [RMI TCP Connection(3)-127.0.0.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-07-21.00:23:37.234 [AMQP Connection 127.0.0.1:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Socket closed)
+25-07-21.00:23:37.241 [AMQP Connection 0:0:0:0:0:0:0:1:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Socket closed)
+25-07-21.00:23:37.244 [RMI TCP Connection(2)-127.0.0.1] WARN  RabbitHealthIndicator  - Rabbit health check failed
+org.springframework.amqp.AmqpAuthenticationException: com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:64)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:385)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1225)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 50 common frames omitted
+25-07-21.00:23:37.247 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.00:23:37.437 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.00:29:44.066 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:29:44.069 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.11:32:46.923 [main            ] INFO  Application            - Starting Application using Java 17.0.8 on FWLMacBook-Pro.local with PID 75458 (/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app)
+25-07-21.11:32:46.924 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-07-21.11:32:47.391 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.11:32:47.391 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.11:32:47.482 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.11:32:47.483 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.11:32:47.507 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+25-07-21.11:32:47.836 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-07-21.11:32:47.840 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-0.0.0.0-8091"]
+25-07-21.11:32:47.840 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-07-21.11:32:47.840 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-07-21.11:32:47.883 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-07-21.11:32:47.883 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 924 ms
+25-07-21.11:32:48.088 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.11:32:48.097 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.11:32:48.104 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.11:32:48.110 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.11:32:48.114 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.11:32:48.119 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.11:32:48.139 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.11:32:48.272 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.11:32:48.283 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.11:32:48.352 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.11:32:48.361 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.11:32:48.514 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.11:32:48.819 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.11:32:48.856 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-0.0.0.0-8091"]
+25-07-21.11:32:48.862 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-07-21.11:32:48.871 [main            ] INFO  Application            - Started Application in 2.327 seconds (JVM running for 2.882)
+25-07-21.11:32:48.873 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.11:32:48.873 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.11:32:49.083 [RMI TCP Connection(3)-169.254.215.246] INFO  CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+25-07-21.11:32:49.084 [RMI TCP Connection(2)-169.254.215.246] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-07-21.11:32:49.084 [RMI TCP Connection(2)-169.254.215.246] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-07-21.11:32:49.085 [RMI TCP Connection(2)-169.254.215.246] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-07-21.11:32:49.129 [AMQP Connection 127.0.0.1:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Socket closed)
+25-07-21.11:32:49.132 [AMQP Connection 0:0:0:0:0:0:0:1:5672] WARN  ForgivingExceptionHandler - An unexpected connection driver error occurred (Exception message: Socket closed)
+25-07-21.11:32:49.135 [RMI TCP Connection(3)-169.254.215.246] WARN  RabbitHealthIndicator  - Rabbit health check failed
+org.springframework.amqp.AmqpAuthenticationException: com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:64)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:603)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2210)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2183)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2163)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.rabbitmq.client.AuthenticationFailureException: ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:385)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1225)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:641)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:616)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:566)
+	... 50 common frames omitted
+25-07-21.11:32:49.137 [RMI TCP Connection(3)-169.254.215.246] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.11:32:49.295 [RMI TCP Connection(3)-169.254.215.246] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.11:50:32.897 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.11:50:32.920 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

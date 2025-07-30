@@ -1,0 +1,1116 @@
+25-07-21.00:03:32.370 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 46641 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.00:03:32.371 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.00:03:32.697 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:03:32.697 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:03:32.774 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:03:32.775 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:03:32.791 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.00:03:33.196 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:03:33.206 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:03:33.213 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:03:33.219 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:03:33.224 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:03:33.229 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:03:33.249 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:03:33.407 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:03:33.418 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:03:33.491 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:03:33.499 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:03:33.815 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:03:34.148 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.00:03:34.148 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.00:03:34.151 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:03:34.164 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 16 ms
+25-07-21.00:03:34.182 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.973 seconds (JVM running for 2.365)
+25-07-21.00:03:34.199 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:03:34.199 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:07:14.108 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 46858 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.00:07:14.109 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.00:07:14.440 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:07:14.440 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:07:14.515 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:07:14.517 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:07:14.533 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+25-07-21.00:07:14.926 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:07:14.937 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:07:14.944 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:07:14.950 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:07:14.955 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:07:14.960 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:07:14.979 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:07:15.146 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:07:15.157 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:07:15.229 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:07:15.239 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:07:15.564 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:07:15.914 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.00:07:15.914 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.00:07:15.917 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:07:15.931 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 17 ms
+25-07-21.00:07:15.952 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.013 seconds (JVM running for 2.39)
+25-07-21.00:07:15.970 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:07:15.970 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:08:48.758 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 46910 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.00:08:48.759 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.00:08:49.088 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:08:49.088 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:08:49.175 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:08:49.176 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:08:49.193 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.00:08:49.589 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:08:49.599 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:08:49.606 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:08:49.612 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:08:49.617 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:08:49.622 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:08:49.642 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:08:49.802 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:08:49.814 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:08:49.885 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:08:49.894 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:08:50.236 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:08:50.611 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.00:08:50.611 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.00:08:50.614 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:08:50.627 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 16 ms
+25-07-21.00:08:50.644 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.058 seconds (JVM running for 2.449)
+25-07-21.00:08:50.662 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:08:50.662 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:11:28.890 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 47034 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.00:11:28.891 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.00:11:29.288 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:11:29.288 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:11:29.391 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:11:29.392 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:11:29.413 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+25-07-21.00:11:29.805 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:11:29.815 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:11:29.822 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:11:29.829 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:11:29.834 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:11:29.840 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:11:29.860 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:11:30.040 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:11:30.052 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:11:30.124 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:11:30.133 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:11:30.440 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:11:30.772 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.00:11:30.772 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.00:11:30.775 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:11:30.786 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.00:11:30.804 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.084 seconds (JVM running for 2.512)
+25-07-21.00:11:30.823 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:11:30.823 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:11:31.035 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.00:11:31.157 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.00:11:31.306 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:11:31.312 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.00:12:45.874 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 47079 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.00:12:45.874 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.00:12:46.235 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:12:46.236 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:12:46.319 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:12:46.320 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:12:46.336 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-07-21.00:12:46.746 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:12:46.756 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:12:46.762 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:12:46.768 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:12:46.773 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:12:46.778 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:12:46.797 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:12:46.960 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:12:46.971 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:12:47.043 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:12:47.052 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:12:47.376 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:12:47.717 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.00:12:47.717 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.00:12:47.720 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:12:47.731 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.00:12:47.748 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.048 seconds (JVM running for 2.553)
+25-07-21.00:12:47.765 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:12:47.765 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:12:47.970 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.00:12:48.091 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.00:12:48.231 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:12:48.235 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.00:14:42.088 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 47160 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.00:14:42.089 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.00:14:42.416 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:14:42.416 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:14:42.495 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:14:42.496 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:14:42.510 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+25-07-21.00:14:42.896 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:14:42.907 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:14:42.915 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:14:42.920 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:14:42.925 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:14:42.930 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:14:42.950 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:14:43.108 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:14:43.119 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:14:43.197 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:14:43.206 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:14:43.531 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:14:43.862 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.00:14:43.862 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.00:14:43.865 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:14:43.876 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.00:14:43.894 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.968 seconds (JVM running for 2.388)
+25-07-21.00:14:43.911 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:14:43.911 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:14:44.239 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.00:14:44.362 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.00:14:44.496 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:14:44.526 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.00:16:11.527 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 47220 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.00:16:11.527 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.00:16:11.858 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:16:11.858 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:16:11.946 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:16:11.947 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:16:11.963 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.00:16:12.924 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:16:12.935 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:16:12.945 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:16:12.952 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:16:12.958 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:16:12.964 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:16:12.985 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:16:13.159 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:16:13.172 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:16:13.245 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:16:13.261 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:16:13.629 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:16:13.988 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.00:16:13.988 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.00:16:13.991 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:16:14.003 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 15 ms
+25-07-21.00:16:14.027 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.67 seconds (JVM running for 3.087)
+25-07-21.00:16:14.055 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:16:14.056 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:16:14.347 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.00:16:14.554 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.00:16:14.682 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:16:14.719 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.00:16:17.452 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 47225 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.00:16:17.452 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.00:16:17.776 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.00:16:17.776 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.00:16:17.857 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.00:16:17.858 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.00:16:17.878 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+25-07-21.00:16:18.264 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.00:16:18.274 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.00:16:18.281 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.00:16:18.287 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.00:16:18.292 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.00:16:18.298 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.00:16:18.317 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.00:16:18.479 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.00:16:18.490 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.00:16:18.559 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:16:18.570 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.00:16:18.900 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.00:16:19.231 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.00:16:19.231 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.00:16:19.234 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.00:16:19.245 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.00:16:19.263 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.996 seconds (JVM running for 2.409)
+25-07-21.00:16:19.282 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.00:16:19.282 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.00:16:19.507 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.00:16:19.624 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.00:16:19.766 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.00:16:19.780 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:01:49.419 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 79313 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:01:49.420 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:01:49.754 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:01:49.754 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:01:49.843 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:01:49.845 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:01:49.863 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+25-07-21.13:01:50.332 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:01:50.343 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:01:50.350 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:01:50.359 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:01:50.368 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:01:50.374 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:01:50.394 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:01:50.575 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:01:50.587 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:01:50.659 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:01:50.670 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:01:51.000 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:01:51.354 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:01:51.354 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:01:51.356 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:01:51.368 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.13:01:51.411 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.256 seconds (JVM running for 2.75)
+25-07-21.13:01:51.443 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:01:51.443 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:01:51.675 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:01:51.798 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:01:51.939 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:01:51.960 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:08:42.630 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 79559 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:08:42.630 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:08:42.977 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:08:42.977 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:08:43.061 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:08:43.063 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:08:43.078 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-07-21.13:08:43.820 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:08:43.833 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:08:43.842 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:08:43.848 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:08:43.854 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:08:43.859 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:08:43.897 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:08:44.243 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:08:44.268 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:08:44.455 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:08:44.468 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:08:45.007 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:08:45.716 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:08:45.716 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:08:45.719 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:08:45.734 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 18 ms
+25-07-21.13:08:45.771 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 3.322 seconds (JVM running for 3.96)
+25-07-21.13:08:45.828 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:08:45.829 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:08:46.354 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:08:46.535 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:09:04.928 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s392ms).
+25-07-21.13:10:04.898 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s970ms).
+25-07-21.13:10:23.773 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:10:23.810 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:11:27.955 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 79646 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:11:27.956 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:11:28.314 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:11:28.314 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:11:28.399 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:11:28.400 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:11:28.421 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+25-07-21.13:11:29.331 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:11:29.342 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:11:29.350 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:11:29.356 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:11:29.362 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:11:29.368 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:11:29.406 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:11:29.712 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:11:29.740 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:11:29.955 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:11:29.965 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:11:30.525 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:11:31.201 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:11:31.201 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:11:31.204 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:11:31.221 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 20 ms
+25-07-21.13:11:31.250 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 3.494 seconds (JVM running for 4.076)
+25-07-21.13:11:31.307 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:11:31.308 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:11:31.805 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:11:31.978 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:12:11.087 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:12:11.116 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:12:15.370 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 79686 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:12:15.371 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:12:15.718 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:12:15.718 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:12:15.803 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:12:15.804 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:12:15.820 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-07-21.13:12:16.546 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:12:16.558 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:12:16.567 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:12:16.573 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:12:16.580 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:12:16.589 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:12:16.622 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:12:16.948 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:12:16.971 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:12:17.146 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:12:17.156 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:12:17.685 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:12:18.369 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:12:18.370 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:12:18.372 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:12:18.385 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 15 ms
+25-07-21.13:12:18.413 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 3.228 seconds (JVM running for 3.664)
+25-07-21.13:12:18.468 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:12:18.469 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:12:19.032 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:12:19.196 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:13:41.974 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:13:41.981 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:13:43.339 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 79746 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:13:43.340 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:13:43.661 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:13:43.662 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:13:43.742 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:13:43.744 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:13:43.758 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.13:13:44.455 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:13:44.466 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:13:44.474 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:13:44.480 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:13:44.486 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:13:44.494 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:13:44.532 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:13:44.812 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:13:44.833 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:13:45.005 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:13:45.013 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:13:45.563 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:13:46.224 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:13:46.224 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:13:46.227 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:13:46.240 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 16 ms
+25-07-21.13:13:46.267 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 3.121 seconds (JVM running for 3.742)
+25-07-21.13:13:46.321 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:13:46.321 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:13:46.847 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:13:47.059 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:14:24.993 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s932ms).
+25-07-21.13:14:25.110 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:14:25.147 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:14:48.568 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 79785 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:14:48.569 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:14:48.910 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:14:48.910 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:14:48.999 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:14:49.000 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:14:49.015 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.13:14:49.799 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:14:49.810 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:14:49.819 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:14:49.825 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:14:49.831 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:14:49.836 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:14:49.871 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:14:50.206 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:14:50.233 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:14:50.442 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:14:50.455 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:14:51.055 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:14:51.753 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:14:51.753 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:14:51.756 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:14:51.769 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 16 ms
+25-07-21.13:14:51.798 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 3.406 seconds (JVM running for 3.887)
+25-07-21.13:14:51.852 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:14:51.852 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:14:52.459 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:14:52.638 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:18:33.592 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:18:33.599 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:21:01.664 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 80007 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:21:01.664 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:21:01.988 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:21:01.988 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:21:02.066 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:21:02.067 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:21:02.083 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.13:21:02.567 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:21:02.577 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:21:02.584 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:21:02.591 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:21:02.595 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:21:02.601 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:21:02.622 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:21:02.790 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:21:02.801 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:21:02.875 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:21:02.885 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:21:03.204 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:21:03.542 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:21:03.543 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:21:03.545 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:21:03.555 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 12 ms
+25-07-21.13:21:03.574 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.076 seconds (JVM running for 2.51)
+25-07-21.13:21:03.592 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:21:03.593 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:21:03.803 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:21:03.921 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:21:04.044 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:21:04.069 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:25:15.871 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 80181 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:25:15.872 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:25:16.273 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:25:16.273 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:25:16.372 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:25:16.373 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:25:16.390 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.13:25:16.792 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:25:16.802 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:25:16.809 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:25:16.815 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:25:16.820 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:25:16.826 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:25:16.846 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:25:17.019 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:25:17.032 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:25:17.138 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:25:17.155 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:25:17.513 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:25:17.876 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:25:17.876 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:25:17.879 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:25:17.892 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 15 ms
+25-07-21.13:25:17.909 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.236 seconds (JVM running for 2.708)
+25-07-21.13:25:17.929 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:25:17.929 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:25:18.138 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:25:18.258 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:25:18.306 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:25:18.321 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:25:18.321 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = null
+25-07-21.13:25:18.383 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:25:18.418 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:26:24.626 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 80219 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:26:24.626 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:26:24.936 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:26:24.937 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:26:25.012 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:26:25.013 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:26:25.028 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-07-21.13:26:25.405 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:26:25.416 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:26:25.423 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:26:25.429 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:26:25.435 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:26:25.440 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:26:25.461 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:26:25.625 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:26:25.639 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:26:25.708 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:26:25.720 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:26:26.045 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:26:26.365 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:26:26.365 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:26:26.368 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:26:26.379 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.13:26:26.396 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.936 seconds (JVM running for 2.415)
+25-07-21.13:26:26.415 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:26:26.415 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:26:26.637 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:26:26.758 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:26:26.799 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:26:26.812 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:26:26.813 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = null
+25-07-21.13:26:26.871 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:26:26.907 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:36:22.563 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 80665 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:36:22.563 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:36:22.891 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:36:22.891 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:36:22.968 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:36:22.969 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:36:22.987 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+25-07-21.13:36:23.395 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:36:23.407 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:36:23.417 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:36:23.424 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:36:23.429 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:36:23.434 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:36:23.454 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:36:23.616 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:36:23.628 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:36:23.701 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:36:23.710 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:36:24.043 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:36:24.420 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:36:24.421 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:36:24.423 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:36:24.435 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.13:36:24.453 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.071 seconds (JVM running for 2.52)
+25-07-21.13:36:24.472 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:36:24.472 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:36:24.667 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:36:24.785 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:36:24.835 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:36:24.849 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:36:24.850 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = null
+25-07-21.13:36:24.915 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:36:24.937 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:38:45.875 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 80771 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:38:45.875 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:38:46.214 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:38:46.214 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:38:46.296 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:38:46.297 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:38:46.311 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.13:38:46.703 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:38:46.714 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:38:46.722 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:38:46.728 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:38:46.733 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:38:46.739 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:38:46.759 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:38:46.926 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:38:46.938 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:38:47.009 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:38:47.017 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:38:47.319 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:38:47.699 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:38:47.699 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:38:47.702 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:38:47.712 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 13 ms
+25-07-21.13:38:47.729 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.027 seconds (JVM running for 2.429)
+25-07-21.13:38:47.750 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:38:47.751 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:38:47.946 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:38:48.072 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:38:48.115 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:38:48.116 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = null
+25-07-21.13:38:48.185 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:38:48.225 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:39:29.541 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 80800 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:39:29.542 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:39:29.869 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:39:29.870 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:39:29.950 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:39:29.952 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:39:29.966 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.13:39:30.673 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:39:30.683 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:39:30.692 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:39:30.698 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:39:30.703 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:39:30.709 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:39:30.750 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:39:31.044 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:39:31.066 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:39:31.242 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:39:31.251 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:39:31.850 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:39:32.613 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:39:32.613 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:39:32.618 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:39:32.632 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 19 ms
+25-07-21.13:39:32.660 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 3.321 seconds (JVM running for 3.76)
+25-07-21.13:39:32.711 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:39:32.711 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:39:33.310 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:39:33.478 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:39:33.541 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:39:48.943 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s462ms).
+25-07-21.13:41:10.516 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:41:41.960 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = null
+25-07-21.13:41:42.041 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:41:42.082 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:42:42.389 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 80922 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:42:42.390 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:42:42.759 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:42:42.759 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:42:42.841 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:42:42.843 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:42:42.857 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.13:42:43.590 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:42:43.601 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:42:43.609 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:42:43.614 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:42:43.620 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:42:43.626 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:42:43.663 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:42:43.964 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:42:43.987 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:42:44.190 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:42:44.199 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:42:44.749 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:42:45.415 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:42:45.416 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:42:45.421 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:42:45.434 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 18 ms
+25-07-21.13:42:45.461 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 3.383 seconds (JVM running for 4.282)
+25-07-21.13:42:45.517 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:42:45.517 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:42:46.009 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:42:46.183 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:42:46.247 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:44:33.521 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s231ms).
+25-07-21.13:44:33.533 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:44:33.542 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = null
+25-07-21.13:44:33.607 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:44:33.631 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:44:36.420 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 80991 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:44:36.421 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:44:36.749 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:44:36.749 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:44:36.826 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:44:36.827 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:44:36.840 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.13:44:37.565 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:44:37.576 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:44:37.584 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:44:37.589 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:44:37.596 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:44:37.601 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:44:37.639 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:44:37.938 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:44:37.961 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:44:38.138 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:44:38.147 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:44:38.749 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:44:39.619 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:44:39.619 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:44:39.622 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:44:39.639 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 20 ms
+25-07-21.13:44:39.671 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 3.435 seconds (JVM running for 3.883)
+25-07-21.13:44:39.735 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:44:39.735 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:44:40.247 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:44:40.417 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:44:40.477 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:46:16.978 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s548ms).
+25-07-21.13:46:28.474 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.13:46:28.485 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = null
+25-07-21.13:46:28.564 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:46:28.583 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:52:05.680 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 81291 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:52:05.681 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:52:05.999 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:52:05.999 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:52:06.080 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:52:06.081 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:52:06.099 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.13:52:06.489 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:52:06.499 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:52:06.507 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:52:06.513 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:52:06.518 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:52:06.524 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:52:06.544 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:52:06.711 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:52:06.722 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:52:06.795 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:52:06.804 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:52:07.131 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:52:07.550 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:52:07.550 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:52:07.553 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:52:07.593 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 43 ms
+25-07-21.13:52:07.616 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.097 seconds (JVM running for 2.507)
+25-07-21.13:52:07.634 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:52:07.635 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:52:07.874 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:52:07.990 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:52:08.034 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.13:52:08.048 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.13:52:08.049 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.13:52:08.120 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:52:08.142 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.13:55:53.826 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 81460 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.13:55:53.827 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.13:55:54.141 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.13:55:54.141 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.13:55:54.222 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.13:55:54.223 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.13:55:54.242 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+25-07-21.13:55:54.636 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.13:55:54.647 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.13:55:54.654 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.13:55:54.659 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.13:55:54.664 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.13:55:54.671 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.13:55:54.694 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.13:55:54.853 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.13:55:54.864 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.13:55:54.935 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:55:54.946 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.13:55:55.265 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.13:55:55.586 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.13:55:55.586 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.13:55:55.589 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.13:55:55.600 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.13:55:55.617 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.965 seconds (JVM running for 2.32)
+25-07-21.13:55:55.633 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.13:55:55.634 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.13:55:55.833 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.13:55:55.955 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.13:55:55.996 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.13:55:56.009 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.13:55:56.009 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.13:55:56.099 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.13:55:56.117 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.14:01:48.854 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 81744 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:01:48.854 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:01:49.192 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:01:49.192 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:01:49.300 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:01:49.301 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:01:49.317 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-07-21.14:01:49.711 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:01:49.721 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:01:49.728 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:01:49.733 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:01:49.738 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:01:49.747 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:01:49.771 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:01:49.928 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:01:49.944 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:01:50.027 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:01:50.038 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:01:50.361 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:01:50.715 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:01:50.715 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:01:50.719 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:01:50.730 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 15 ms
+25-07-21.14:01:50.748 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.076 seconds (JVM running for 2.562)
+25-07-21.14:01:50.768 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:01:50.768 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:01:50.972 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.14:01:51.084 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.14:01:51.129 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:01:51.143 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:01:51.143 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.14:01:51.179 [main            ] INFO  JwtAuthenticationInterceptor - 🔐 JwtAuthenticationInterceptor called! path = /api/v1/auth/info
+25-07-21.14:01:51.180 [main            ] INFO  JwtAuthenticationInterceptor - 🔐 Header Authorization = null
+25-07-21.14:01:51.207 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.14:01:51.235 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.14:11:04.452 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 82131 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:11:04.453 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:11:04.805 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:11:04.805 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:11:04.893 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:11:04.895 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:11:04.911 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.14:11:05.322 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:11:05.333 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:11:05.341 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:11:05.347 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:11:05.352 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:11:05.357 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:11:05.378 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:11:05.545 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:11:05.557 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:11:05.715 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:11:05.756 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:11:06.086 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:11:06.427 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:11:06.427 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:11:06.430 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:11:06.441 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.14:11:06.458 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.185 seconds (JVM running for 2.702)
+25-07-21.14:11:06.477 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:11:06.477 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:11:06.667 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/register
+25-07-21.14:11:06.667 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = null
+25-07-21.14:11:06.696 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.14:11:06.832 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.14:11:06.879 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:11:06.890 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/login
+25-07-21.14:11:06.891 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = null
+25-07-21.14:11:06.894 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:11:06.894 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.14:11:06.934 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/info
+25-07-21.14:11:06.934 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = null
+25-07-21.14:11:06.973 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.14:11:06.997 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.14:13:18.738 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 82230 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:13:18.739 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:13:19.079 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:13:19.079 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:13:19.159 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:13:19.160 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:13:19.178 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+25-07-21.14:13:19.603 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:13:19.613 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:13:19.621 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:13:19.627 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:13:19.632 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:13:19.639 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:13:19.660 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:13:19.955 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:13:19.971 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:13:20.047 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:13:20.056 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:13:20.439 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:13:20.823 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:13:20.823 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:13:20.826 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:13:20.842 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 19 ms
+25-07-21.14:13:20.863 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.304 seconds (JVM running for 2.832)
+25-07-21.14:13:20.903 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:13:20.903 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:14:44.093 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 82278 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:14:44.093 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:14:44.405 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:14:44.405 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:14:44.490 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:14:44.491 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:14:44.507 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.14:14:44.903 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:14:44.914 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:14:44.921 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:14:44.927 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:14:44.932 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:14:44.938 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:14:44.964 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:14:45.132 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:14:45.143 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:14:45.214 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:14:45.222 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:14:45.659 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:14:46.002 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:14:46.002 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:14:46.005 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:14:46.017 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 15 ms
+25-07-21.14:14:46.035 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.131 seconds (JVM running for 2.521)
+25-07-21.14:14:46.051 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:14:46.052 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:14:46.221 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header = null
+25-07-21.14:16:43.372 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 82356 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:16:43.373 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:16:43.689 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:16:43.689 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:16:43.766 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:16:43.767 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:16:43.782 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.14:16:44.198 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:16:44.209 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:16:44.218 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:16:44.223 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:16:44.228 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:16:44.234 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:16:44.255 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:16:44.416 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:16:44.430 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:16:44.506 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:16:44.516 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:16:44.840 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:16:45.182 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:16:45.182 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:16:45.184 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:16:45.195 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 13 ms
+25-07-21.14:16:45.213 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.025 seconds (JVM running for 2.415)
+25-07-21.14:16:45.230 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:16:45.230 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:16:45.391 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header Authorization = null
+25-07-21.14:20:03.327 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 82508 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:20:03.327 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:20:03.644 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:20:03.645 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:20:03.725 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:20:03.726 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:20:03.742 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.14:20:04.135 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:20:04.146 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:20:04.153 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:20:04.159 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:20:04.166 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:20:04.172 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:20:04.193 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:20:04.357 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:20:04.368 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:20:04.442 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:20:04.454 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:20:04.764 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:20:05.084 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:20:05.084 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:20:05.087 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:20:05.099 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 14 ms
+25-07-21.14:20:05.116 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.955 seconds (JVM running for 2.347)
+25-07-21.14:20:05.134 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:20:05.134 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:20:05.323 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.14:20:05.440 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.14:20:05.482 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:20:05.496 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:20:05.497 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.14:20:05.534 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header Authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTA3NjA1fQ.86GANeL7ZqXq1O3KY4Qz7a__bjcNhW7wJU8gKTZF-P0
+25-07-21.14:20:05.534 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/info
+25-07-21.14:20:05.534 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTA3NjA1fQ.86GANeL7ZqXq1O3KY4Qz7a__bjcNhW7wJU8gKTZF-P0
+25-07-21.14:20:05.542 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.14:20:05.571 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.14:20:05.596 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.14:26:59.664 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 82790 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:26:59.665 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:26:59.986 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:26:59.986 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:27:00.064 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:27:00.065 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:27:00.082 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.14:27:00.519 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:27:00.532 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:27:00.539 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:27:00.544 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:27:00.549 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:27:00.555 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:27:00.575 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:27:00.742 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:27:00.753 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:27:00.824 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:27:00.839 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:27:01.135 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:27:01.447 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:27:01.447 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:27:01.450 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:27:01.459 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 12 ms
+25-07-21.14:27:01.476 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.983 seconds (JVM running for 2.379)
+25-07-21.14:27:01.498 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:27:01.498 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:27:01.685 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.14:27:01.800 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.14:27:01.847 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:27:01.861 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:27:01.861 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.14:27:01.899 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header Authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTA4MDIxfQ.siLm4bFcEBvReE0fRvXgOSkpVm_6RQDs7fvt2oY9pNE
+25-07-21.14:27:01.899 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/info
+25-07-21.14:27:01.899 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTA4MDIxfQ.siLm4bFcEBvReE0fRvXgOSkpVm_6RQDs7fvt2oY9pNE
+25-07-21.14:27:01.915 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = null
+25-07-21.14:27:01.950 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.14:27:01.957 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.14:34:42.720 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 83124 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:34:42.721 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:34:43.069 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:34:43.070 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:34:43.143 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:34:43.144 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:34:43.159 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-07-21.14:34:43.541 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:34:43.551 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:34:43.558 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:34:43.564 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:34:43.570 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:34:43.575 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:34:43.597 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:34:43.760 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:34:43.771 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:34:43.853 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:34:43.863 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:34:44.161 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:34:44.473 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:34:44.473 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:34:44.475 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:34:44.485 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 12 ms
+25-07-21.14:34:44.502 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.941 seconds (JVM running for 2.374)
+25-07-21.14:34:44.518 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:34:44.519 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:34:44.712 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.14:34:44.816 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.14:34:44.857 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:34:44.870 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:34:44.870 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.14:34:44.906 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header Authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTA4NDg0fQ.aqbDZaP8K0ny-uRAO4qK8OqxA1vVzDilpEwXkV0Jo6M
+25-07-21.14:34:44.906 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/info
+25-07-21.14:34:44.906 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTA4NDg0fQ.aqbDZaP8K0ny-uRAO4qK8OqxA1vVzDilpEwXkV0Jo6M
+25-07-21.14:34:44.915 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:34:44.953 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.14:34:44.974 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.14:35:56.768 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 83186 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.14:35:56.768 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.14:35:57.094 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.14:35:57.094 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.14:35:57.172 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.14:35:57.173 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.14:35:57.189 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-07-21.14:35:57.566 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.14:35:57.575 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.14:35:57.582 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.14:35:57.588 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.14:35:57.594 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.14:35:57.599 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.14:35:57.619 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.14:35:57.773 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.14:35:57.784 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.14:35:57.860 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:35:57.875 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.14:35:58.194 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.14:35:58.520 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.14:35:58.520 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.14:35:58.522 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.14:35:58.533 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 13 ms
+25-07-21.14:35:58.550 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.952 seconds (JVM running for 2.395)
+25-07-21.14:35:58.570 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.14:35:58.570 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.14:35:58.782 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.14:35:58.897 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.14:35:58.940 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:35:58.955 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:35:58.955 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.14:35:58.990 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header Authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTA4NTU4fQ.BROfKlEXDyJI4-PJ5BIW8cTFxpvHIrbpOEGC8KUaoLw
+25-07-21.14:35:58.990 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/info
+25-07-21.14:35:58.990 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTA4NTU4fQ.BROfKlEXDyJI4-PJ5BIW8cTFxpvHIrbpOEGC8KUaoLw
+25-07-21.14:35:58.998 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.14:35:59.034 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.14:35:59.050 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.15:02:40.764 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 84379 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.15:02:40.764 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.15:02:41.156 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.15:02:41.156 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.15:02:41.241 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.15:02:41.242 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.15:02:41.259 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+25-07-21.15:02:41.702 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.15:02:41.713 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.15:02:41.720 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.15:02:41.725 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.15:02:41.730 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.15:02:41.735 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.15:02:41.756 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.15:02:41.924 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.15:02:41.934 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.15:02:42.010 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.15:02:42.020 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.15:02:42.361 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.15:02:42.713 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.15:02:42.714 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.15:02:42.716 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.15:02:42.727 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 13 ms
+25-07-21.15:02:42.746 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 2.221 seconds (JVM running for 2.849)
+25-07-21.15:02:42.791 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.15:02:42.792 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.15:02:43.095 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.15:02:43.296 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.15:02:43.390 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.15:02:43.408 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.15:02:43.408 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.15:02:43.455 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header Authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTEwMTYzfQ.uRWAtfI3NkEMX_D-lAC18TfC2RYllw2Xt5AoLRpw_0I
+25-07-21.15:02:43.455 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/info
+25-07-21.15:02:43.455 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTEwMTYzfQ.uRWAtfI3NkEMX_D-lAC18TfC2RYllw2Xt5AoLRpw_0I
+25-07-21.15:02:43.466 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.15:02:43.500 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.15:02:43.514 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-07-21.15:05:24.164 [main            ] INFO  LoginControllerTest    - Starting LoginControllerTest using Java 17.0.8 on FWLMacBook-Pro.local with PID 84504 (started by fwl in /Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app)
+25-07-21.15:05:24.164 [main            ] INFO  LoginControllerTest    - The following 1 profile is active: "dev"
+25-07-21.15:05:24.488 [main            ] DEBUG MybatisPlusAutoConfiguration - Searching for mappers annotated with @Mapper
+25-07-21.15:05:24.489 [main            ] DEBUG MybatisPlusAutoConfiguration - Using auto-configuration base package 'com.wanling'
+25-07-21.15:05:24.567 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-07-21.15:05:24.568 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-07-21.15:05:24.582 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+25-07-21.15:05:24.963 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ActivitiesMapper.xml]'
+25-07-21.15:05:24.973 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/ComfortFeedbackMapper.xml]'
+25-07-21.15:05:24.980 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/EnvironmentalReadingsMapper.xml]'
+25-07-21.15:05:24.987 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/LocationTagsMapper.xml]'
+25-07-21.15:05:24.992 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/SensorsMapper.xml]'
+25-07-21.15:05:24.996 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UserLocationTagsMapper.xml]'
+25-07-21.15:05:25.017 [main            ] DEBUG MybatisSqlSessionFactoryBean - Parsed mapper file: 'file [/Users/fwl/coding/ideaJavaProj/sideproject/thermal-comfort-app/thermal-comfort-app-app/target/classes/mybatis/mapper/UsersMapper.xml]'
+25-07-21.15:05:25.179 [main            ] INFO  Version                - Redisson 3.23.4
+25-07-21.15:05:25.190 [main            ] WARN  DnsServerAddressStreamProviders - Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+25-07-21.15:05:25.261 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.15:05:25.269 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-07-21.15:05:25.593 [main            ] DEBUG MybatisPlusAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+25-07-21.15:05:25.940 [main            ] INFO  SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+25-07-21.15:05:25.940 [main            ] INFO  TestDispatcherServlet  - Initializing Servlet ''
+25-07-21.15:05:25.943 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-07-21.15:05:25.956 [main            ] INFO  TestDispatcherServlet  - Completed initialization in 16 ms
+25-07-21.15:05:25.973 [main            ] INFO  LoginControllerTest    - Started LoginControllerTest in 1.98 seconds (JVM running for 2.341)
+25-07-21.15:05:25.994 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL start create  ...  
+25-07-21.15:05:25.994 [main            ] DEBUG DdlApplicationRunner   -   ...  DDL end create  ...  
+25-07-21.15:05:26.198 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-07-21.15:05:26.298 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-07-21.15:05:26.344 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.15:05:26.356 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.15:05:26.357 [main            ] INFO  LoginServiceImpl       - 🧾 UserEntity createdAt = 2025-07-21T00:11:31.208664
+25-07-21.15:05:26.392 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header Authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTEwMzI2fQ.AMjdgFptUvIXL8Ofq2IxbNBZecw27mxQ2VGyiTr1s4I
+25-07-21.15:05:26.392 [main            ] INFO  JwtAuthenticationFilter - 🔐 JwtAuthenticationFilter path = /api/v1/auth/info
+25-07-21.15:05:26.393 [main            ] INFO  JwtAuthenticationFilter - 🔐 Header access-token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSX0lORk8iLCJ1c2VySWQiOiI4ZDQ2OGY3Yi0wM2Y2LTQ3NjAtYTRiOC0yMjBlMTc1YjIzMmMiLCJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjUtMDctMjFUMDA6MTE6MzEuMjA4NjY0IiwiZXhwIjoxNzUzMTEwMzI2fQ.AMjdgFptUvIXL8Ofq2IxbNBZecw27mxQ2VGyiTr1s4I
+25-07-21.15:05:26.401 [main            ] INFO  UserRepository         - 🛠 Mapping Users to UserEntity: po.created_at = 2025-07-21T00:11:31.208664
+25-07-21.15:05:26.425 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-07-21.15:05:26.447 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

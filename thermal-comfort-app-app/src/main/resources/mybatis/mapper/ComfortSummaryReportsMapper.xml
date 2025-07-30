@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wanling.infrastructure.persistent.mapper.ComfortSummaryReportsMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanling.infrastructure.persistent.po.ComfortSummaryReports">
+            <id property="summary_id" column="summary_id" jdbcType="VARCHAR"/>
+            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="start_date" column="start_date" jdbcType="DATE"/>
+            <result property="end_date" column="end_date" jdbcType="DATE"/>
+            <result property="temp_comfort_range" column="temp_comfort_range" jdbcType="OTHER"/>
+            <result property="location_stats" column="location_stats" jdbcType="OTHER"/>
+            <result property="created_at" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="generated_by" column="generated_by" jdbcType="VARCHAR"/>
+            <result property="source_type" column="source_type" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        summary_id,user_id,start_date,
+        end_date,temp_comfort_range,location_stats,
+        created_at,generated_by,source_type
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from comfort_summary_reports
+        where  summary_id = #{summary_id,jdbcType=VARCHAR} 
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from comfort_summary_reports
+        where  summary_id = #{summary_id,jdbcType=VARCHAR} 
+    </delete>
+    <insert id="insert" keyColumn="summary_id" keyProperty="summary_id" parameterType="com.wanling.infrastructure.persistent.po.ComfortSummaryReports" useGeneratedKeys="true">
+        insert into comfort_summary_reports
+        ( summary_id,user_id,start_date
+        ,end_date,temp_comfort_range,location_stats
+        ,created_at,generated_by,source_type
+        )
+        values (#{summary_id,jdbcType=VARCHAR},#{user_id,jdbcType=VARCHAR},#{start_date,jdbcType=DATE}
+        ,#{end_date,jdbcType=DATE},#{temp_comfort_range,jdbcType=OTHER},#{location_stats,jdbcType=OTHER}
+        ,#{created_at,jdbcType=TIMESTAMP},#{generated_by,jdbcType=VARCHAR},#{source_type,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="summary_id" keyProperty="summary_id" parameterType="com.wanling.infrastructure.persistent.po.ComfortSummaryReports" useGeneratedKeys="true">
+        insert into comfort_summary_reports
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="summary_id != null">summary_id,</if>
+                <if test="user_id != null">user_id,</if>
+                <if test="start_date != null">start_date,</if>
+                <if test="end_date != null">end_date,</if>
+                <if test="temp_comfort_range != null">temp_comfort_range,</if>
+                <if test="location_stats != null">location_stats,</if>
+                <if test="created_at != null">created_at,</if>
+                <if test="generated_by != null">generated_by,</if>
+                <if test="source_type != null">source_type,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="summary_id != null">#{summary_id,jdbcType=VARCHAR},</if>
+                <if test="user_id != null">#{user_id,jdbcType=VARCHAR},</if>
+                <if test="start_date != null">#{start_date,jdbcType=DATE},</if>
+                <if test="end_date != null">#{end_date,jdbcType=DATE},</if>
+                <if test="temp_comfort_range != null">#{temp_comfort_range,jdbcType=OTHER},</if>
+                <if test="location_stats != null">#{location_stats,jdbcType=OTHER},</if>
+                <if test="created_at != null">#{created_at,jdbcType=TIMESTAMP},</if>
+                <if test="generated_by != null">#{generated_by,jdbcType=VARCHAR},</if>
+                <if test="source_type != null">#{source_type,jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.ComfortSummaryReports">
+        update comfort_summary_reports
+        <set>
+                <if test="user_id != null">
+                    user_id = #{user_id,jdbcType=VARCHAR},
+                </if>
+                <if test="start_date != null">
+                    start_date = #{start_date,jdbcType=DATE},
+                </if>
+                <if test="end_date != null">
+                    end_date = #{end_date,jdbcType=DATE},
+                </if>
+                <if test="temp_comfort_range != null">
+                    temp_comfort_range = #{temp_comfort_range,jdbcType=OTHER},
+                </if>
+                <if test="location_stats != null">
+                    location_stats = #{location_stats,jdbcType=OTHER},
+                </if>
+                <if test="created_at != null">
+                    created_at = #{created_at,jdbcType=TIMESTAMP},
+                </if>
+                <if test="generated_by != null">
+                    generated_by = #{generated_by,jdbcType=VARCHAR},
+                </if>
+                <if test="source_type != null">
+                    source_type = #{source_type,jdbcType=VARCHAR},
+                </if>
+        </set>
+        where   summary_id = #{summary_id,jdbcType=VARCHAR} 
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.wanling.infrastructure.persistent.po.ComfortSummaryReports">
+        update comfort_summary_reports
+        set 
+            user_id =  #{user_id,jdbcType=VARCHAR},
+            start_date =  #{start_date,jdbcType=DATE},
+            end_date =  #{end_date,jdbcType=DATE},
+            temp_comfort_range =  #{temp_comfort_range,jdbcType=OTHER},
+            location_stats =  #{location_stats,jdbcType=OTHER},
+            created_at =  #{created_at,jdbcType=TIMESTAMP},
+            generated_by =  #{generated_by,jdbcType=VARCHAR},
+            source_type =  #{source_type,jdbcType=VARCHAR}
+        where   summary_id = #{summary_id,jdbcType=VARCHAR} 
+    </update>
+</mapper>

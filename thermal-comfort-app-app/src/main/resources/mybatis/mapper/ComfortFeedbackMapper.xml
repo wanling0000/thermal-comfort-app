@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wanling.infrastructure.persistent.mapper.ComfortFeedbackMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+            <id property="feedbackId" column="feedback_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="timestamp" column="timestamp" jdbcType="TIMESTAMP"/>
+            <result property="comfortLevel" column="comfort_level" jdbcType="INTEGER"/>
+            <result property="feedbackType" column="feedback_type" jdbcType="VARCHAR"/>
+            <result property="activityTypeId" column="activity_type_id" jdbcType="VARCHAR"/>
+            <result property="clothingLevel" column="clothing_level" jdbcType="VARCHAR"/>
+            <result property="adjustedTempLevel" column="adjusted_temp_level" jdbcType="INTEGER"/>
+            <result property="adjustedHumidLevel" column="adjusted_humid_level" jdbcType="INTEGER"/>
+            <result property="notes" column="notes" jdbcType="VARCHAR"/>
+            <result property="locationTagId" column="location_tag_id" jdbcType="VARCHAR"/>
+            <result property="readingId" column="reading_id" jdbcType="VARCHAR"/>
+            <result property="rawCoordinates" column="raw_coordinates" jdbcType="OTHER"/>
+            <result property="userLocationTagId" column="user_location_tag_id" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        feedback_id,user_id,timestamp,
+        comfort_level,feedback_type,activity_type_id,
+        clothing_level,adjusted_temp_level,adjusted_humid_level,
+        notes,location_tag_id,reading_id,
+        raw_coordinates,user_location_tag_id
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from comfort_feedback
+        where  feedback_id = #{feedback_id,jdbcType=VARCHAR} 
+    </select>
+    <select id="selectMissingReadingId"
+            resultType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        SELECT *
+        FROM comfort_feedback
+        WHERE reading_id IS NULL
+    </select>
+    <select id="findAllByUserIdOrderByTimestampDesc"
+            resultType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        SELECT *
+        FROM comfort_feedback
+        WHERE user_id = #{userId}
+          AND is_deleted = FALSE
+        ORDER BY timestamp DESC
+    </select>
+    <select id="findLatestByUserId"
+            resultType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        SELECT *
+        FROM comfort_feedback
+        WHERE user_id = #{userId}
+          AND is_deleted = FALSE
+        ORDER BY timestamp DESC
+        LIMIT 1
+    </select>
+    <select id="findByUserIdAndTimeRange"
+            resultType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        SELECT
+            feedback_id,
+            comfort_level,
+            notes,
+            activity_type_id,
+            clothing_level,
+            reading_id
+        FROM comfort_feedback
+        WHERE user_id = #{userId}
+          AND timestamp BETWEEN #{from} AND #{to}
+          AND is_deleted = FALSE
+    </select>
+    <select id="findDailyStatsForUserInYear"
+            resultType="com.wanling.infrastructure.persistent.po.DailyComfortStatRow">
+        SELECT
+            DATE(timestamp) AS date,
+            AVG(comfort_level) AS averageComfort,
+            COUNT(*) AS feedbackCount
+        FROM comfort_feedback
+        WHERE user_id = #{userId}
+          AND timestamp BETWEEN #{startDate} AND #{endDate}
+          AND is_deleted = FALSE
+        GROUP BY DATE(timestamp)
+        ORDER BY DATE(timestamp)
+    </select>
+    <select id="selectByUserIdAndDate"
+            resultType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        SELECT *
+        FROM comfort_feedback
+        WHERE user_id = #{userId}
+          AND DATE(timestamp) = #{date}
+          AND is_deleted = FALSE
+    </select>
+    <select id="selectByUserIdAndDateRange"
+            resultType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        SELECT * FROM comfort_feedback
+        WHERE user_id = #{userId}
+          AND DATE(timestamp) BETWEEN #{start} AND #{end}
+          AND is_deleted = FALSE
+        ORDER BY timestamp;
+    </select>
+    <select id="selectByIdAndNotDeleted"
+            resultType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        SELECT * FROM comfort_feedback
+        WHERE feedback_id = #{id}
+          AND is_deleted = FALSE
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from comfort_feedback
+        where  feedback_id = #{feedback_id,jdbcType=VARCHAR} 
+    </delete>
+    <insert id="insert"
+            keyColumn="feedback_id"
+            keyProperty="feedbackId"
+            parameterType="com.wanling.infrastructure.persistent.po.ComfortFeedback"
+            useGeneratedKeys="true">
+        insert into comfort_feedback (
+            feedback_id, user_id, timestamp,
+            comfort_level, feedback_type, activity_type_id,
+            clothing_level, adjusted_temp_level, adjusted_humid_level,
+            notes, location_tag_id, reading_id,
+            raw_coordinates, user_location_tag_id
+        ) values (
+                     #{feedbackId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{timestamp,jdbcType=TIMESTAMP},
+                     #{comfortLevel,jdbcType=INTEGER}, #{feedbackType,jdbcType=VARCHAR}, #{activityTypeId,jdbcType=VARCHAR},
+                     #{clothingLevel,jdbcType=VARCHAR}, #{adjustedTempLevel,jdbcType=INTEGER}, #{adjustedHumidLevel,jdbcType=INTEGER},
+                     #{notes,jdbcType=VARCHAR}, #{locationTagId,jdbcType=VARCHAR}, #{readingId,jdbcType=VARCHAR},
+                     ST_GeomFromText(#{rawCoordinates}, 4326), #{userLocationTagId,jdbcType=VARCHAR}
+                 )
+    </insert>
+
+    <insert id="insertSelective" keyColumn="feedback_id" keyProperty="feedback_id" parameterType="com.wanling.infrastructure.persistent.po.ComfortFeedback" useGeneratedKeys="true">
+        insert into comfort_feedback
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="feedback_id != null">feedback_id,</if>
+                <if test="user_id != null">user_id,</if>
+                <if test="timestamp != null">timestamp,</if>
+                <if test="comfort_level != null">comfort_level,</if>
+                <if test="feedback_type != null">feedback_type,</if>
+                <if test="activity_type_id != null">activity_type_id,</if>
+                <if test="clothing_level != null">clothing_level,</if>
+                <if test="adjusted_temp_level != null">adjusted_temp_level,</if>
+                <if test="adjusted_humid_level != null">adjusted_humid_level,</if>
+                <if test="notes != null">notes,</if>
+                <if test="location_tag_id != null">location_tag_id,</if>
+                <if test="reading_id != null">reading_id,</if>
+                <if test="raw_coordinates != null">raw_coordinates,</if>
+                <if test="user_location_tag_id != null">user_location_tag_id,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="feedback_id != null">#{feedback_id,jdbcType=VARCHAR},</if>
+                <if test="user_id != null">#{user_id,jdbcType=VARCHAR},</if>
+                <if test="timestamp != null">#{timestamp,jdbcType=TIMESTAMP},</if>
+                <if test="comfort_level != null">#{comfort_level,jdbcType=INTEGER},</if>
+                <if test="feedback_type != null">#{feedback_type,jdbcType=VARCHAR},</if>
+                <if test="activity_type_id != null">#{activity_type_id,jdbcType=VARCHAR},</if>
+                <if test="clothing_level != null">#{clothing_level,jdbcType=VARCHAR},</if>
+                <if test="adjusted_temp_level != null">#{adjusted_temp_level,jdbcType=INTEGER},</if>
+                <if test="adjusted_humid_level != null">#{adjusted_humid_level,jdbcType=INTEGER},</if>
+                <if test="notes != null">#{notes,jdbcType=VARCHAR},</if>
+                <if test="location_tag_id != null">#{location_tag_id,jdbcType=VARCHAR},</if>
+                <if test="reading_id != null">#{reading_id,jdbcType=VARCHAR},</if>
+                <if test="raw_coordinates != null">#{raw_coordinates,jdbcType=OTHER},</if>
+                <if test="user_location_tag_id != null">#{user_location_tag_id,jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        update comfort_feedback
+        <set>
+                <if test="userId != null">
+                    user_id = #{userId,jdbcType=VARCHAR},
+                </if>
+                <if test="timestamp != null">
+                    timestamp = #{timestamp,jdbcType=TIMESTAMP},
+                </if>
+                <if test="comfortLevel != null">
+                    comfort_level = #{comfortLevel,jdbcType=INTEGER},
+                </if>
+                <if test="feedbackType != null">
+                    feedback_type = #{feedbackType,jdbcType=VARCHAR},
+                </if>
+                <if test="activityTypeId != null">
+                    activity_type_id = #{activityTypeId,jdbcType=VARCHAR},
+                </if>
+                <if test="clothingLevel != null">
+                    clothing_level = #{clothingLevel,jdbcType=VARCHAR},
+                </if>
+                <if test="adjustedTempLevel != null">
+                    adjusted_temp_level = #{adjustedTempLevel,jdbcType=INTEGER},
+                </if>
+                <if test="adjustedHumidLevel != null">
+                    adjusted_humid_level = #{adjustedHumidLevel,jdbcType=INTEGER},
+                </if>
+                <if test="notes != null">
+                    notes = #{notes,jdbcType=VARCHAR},
+                </if>
+                <if test="locationTagId != null">
+                    location_tag_id = #{locationTagId,jdbcType=VARCHAR},
+                </if>
+                <if test="readingId != null">
+                    reading_id = #{readingId,jdbcType=VARCHAR},
+                </if>
+                <if test="rawCoordinates != null">
+                    raw_coordinates = ST_GeomFromText(#{rawCoordinates}, 4326),
+                </if>
+                <if test="userLocationTagId != null">
+                    user_location_tag_id = #{userLocationTagId,jdbcType=VARCHAR},
+                </if>
+        </set>
+        where   feedback_id = #{feedbackId,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.wanling.infrastructure.persistent.po.ComfortFeedback">
+        update comfort_feedback
+        set 
+            user_id =  #{user_id,jdbcType=VARCHAR},
+            timestamp =  #{timestamp,jdbcType=TIMESTAMP},
+            comfort_level =  #{comfort_level,jdbcType=INTEGER},
+            feedback_type =  #{feedback_type,jdbcType=VARCHAR},
+            activity_type_id =  #{activity_type_id,jdbcType=VARCHAR},
+            clothing_level =  #{clothing_level,jdbcType=VARCHAR},
+            adjusted_temp_level =  #{adjusted_temp_level,jdbcType=INTEGER},
+            adjusted_humid_level =  #{adjusted_humid_level,jdbcType=INTEGER},
+            notes =  #{notes,jdbcType=VARCHAR},
+            location_tag_id =  #{location_tag_id,jdbcType=VARCHAR},
+            reading_id =  #{reading_id,jdbcType=VARCHAR},
+            raw_coordinates =  #{raw_coordinates,jdbcType=OTHER},
+            user_location_tag_id =  #{user_location_tag_id,jdbcType=VARCHAR}
+        where   feedback_id = #{feedback_id,jdbcType=VARCHAR} 
+    </update>
+    <update id="updateReadingId">
+        UPDATE comfort_feedback
+        SET reading_id = #{readingId}
+        WHERE feedback_id = #{feedbackId}
+    </update>
+    <update id="markAsDeleted">
+        UPDATE comfort_feedback
+        SET is_deleted = TRUE
+        WHERE feedback_id = #{feedbackId}
+          AND user_id = #{userId}
+    </update>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-infrastructure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-infrastructure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-trigger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-trigger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-types/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thermal-comfort-app-types/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -53,7 +53,7 @@
     </dependencies>
 
     <build>
-        <finalName>thermal-comfort-app-app</finalName>
+        <finalName>thermal-comfort-app</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
