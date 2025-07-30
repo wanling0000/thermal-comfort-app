@@ -26,8 +26,8 @@ class AnalyticsServiceTest {
 
     @Test
     void shouldReturnDailyChartPointsForAdmin() {
-        String userId = "admin";
-        LocalDate testDate = LocalDate.of(2025, 5, 26);
+        String userId = "8d468f7b-03f6-4760-a4b8-220e175b232c";
+        LocalDate testDate = LocalDate.of(2025, 7, 5);
 
         List<DailyChartPoint> points = analyticsService.queryDailyView(userId, testDate);
 
@@ -47,13 +47,13 @@ class AnalyticsServiceTest {
 
     @Test
     void shouldReturnFullYearlyStats() {
-        String userId = "admin";
+        String userId = "8d468f7b-03f6-4760-a4b8-220e175b232c";
         int year = 2025;
 
         YearlyComfortStatsEntity yearlyStats = analyticsService.getYearlyStats(userId, year);
         List<DailyComfortStatEntity> dailyStats = yearlyStats.data();
 
-        assertEquals(365, dailyStats.size(), "✅ 应该有 365 天的数据");
+        assertEquals(365, dailyStats.size(), "✅ Should have data for 365 days");
 
         long withData = dailyStats.stream()
                                   .filter(s -> s.averageComfort().isPresent())
@@ -63,26 +63,26 @@ class AnalyticsServiceTest {
                                      .filter(s -> s.averageComfort().isEmpty())
                                      .count();
 
-        log.info("📊 总天数={} | 有记录={} | 无记录={}", dailyStats.size(), withData, withoutData);
+        log.info("📊 Total Days={} | With Data={} | Without Data={}", dailyStats.size(), withData, withoutData);
 
-        // 检查某个具体日期有数据（假设你知道这天有）
+        // Check that a specific day has data (assuming we know this date has records)
         LocalDate expectedDate = LocalDate.of(2025, 5, 26);
         dailyStats.stream()
                   .filter(d -> d.date().equals(expectedDate))
                   .findFirst()
                   .ifPresentOrElse(stat -> {
-                      log.info("✅ {} 的平均舒适度为: {}", expectedDate, stat.averageComfort());
+                      log.info("✅ Average comfort for {} is: {}", expectedDate, stat.averageComfort());
                       assertTrue(stat.averageComfort().isPresent());
                       assertTrue(stat.feedbackCount() > 0);
-                  }, () -> fail("❌ 没有找到 " + expectedDate + " 的统计"));
+                  }, () -> fail("❌ No stats found for " + expectedDate));
 
-        // 检查某个无记录的日期
+        // Check a date without data
         LocalDate emptyDate = LocalDate.of(2025, 1, 1);
         dailyStats.stream()
                   .filter(d -> d.date().equals(emptyDate))
                   .findFirst()
                   .ifPresent(stat -> {
-                      log.info("📭 {} 无数据，平均舒适度为: {}", emptyDate, stat.averageComfort());
+                      log.info("📭 No data for {}, average comfort: {}", emptyDate, stat.averageComfort());
                       assertTrue(stat.averageComfort().isEmpty());
                       assertEquals(0, stat.feedbackCount());
                   });
@@ -90,7 +90,7 @@ class AnalyticsServiceTest {
 
     @Test
     public void testBuildDailySummaryViaPublicInterface() {
-        String userId = "admin";
+        String userId = "8d468f7b-03f6-4760-a4b8-220e175b232c";
         LocalDate date = LocalDate.of(2025, 5, 26);
 
         SummaryInsightEntity result = analyticsService.getSummaryInsights(userId, date, Resolution.DAILY);
@@ -104,8 +104,8 @@ class AnalyticsServiceTest {
 
     @Test
     public void testBuildWeeklySummaryViaPublicInterface() {
-        String userId = "admin";
-        LocalDate date = LocalDate.of(2025, 5, 26); // 任意在一周中间的一天
+        String userId = "8d468f7b-03f6-4760-a4b8-220e175b232c";
+        LocalDate date = LocalDate.of(2025, 7, 5); // Any day in the middle of a week
 
         SummaryInsightEntity result = analyticsService.getSummaryInsights(userId, date, Resolution.WEEK);
 
@@ -121,8 +121,8 @@ class AnalyticsServiceTest {
 
     @Test
     public void testBuildMonthlySummaryViaPublicInterface() {
-        String userId = "admin";
-        LocalDate date = LocalDate.of(2025, 5, 1); // 月内任意一天即可
+        String userId = "8d468f7b-03f6-4760-a4b8-220e175b232c";
+        LocalDate date = LocalDate.of(2025, 5, 1); // Any day in the month
 
         SummaryInsightEntity result = analyticsService.getSummaryInsights(userId, date, Resolution.MONTH);
 
@@ -136,23 +136,22 @@ class AnalyticsServiceTest {
         );
     }
 
-
     @Test
     public void testBuildYearlySummaryViaPublicInterface() {
-        String userId = "admin";
-        LocalDate date = LocalDate.of(2025, 1, 1); // 测试2025年
+        String userId = "8d468f7b-03f6-4760-a4b8-220e175b232c";
+        LocalDate date = LocalDate.of(2025, 1, 1); // Test year 2025
 
         SummaryInsightEntity result = analyticsService.getSummaryInsights(userId, date, Resolution.YEAR);
 
         assertNotNull(result);
         System.out.println("📅 Yearly Summary for " + date.getYear() + ":");
 
-        // 打印 insight 卡片
+        // Print insight cards
         result.insights().forEach(card ->
                 System.out.println("📌 " + card.title() + ": " + card.content())
         );
 
-        // 打印 location insight（如果有）
+        // Print location insights (if any)
         if (!result.locationInsights().isEmpty()) {
             System.out.println("📍 Location stats:");
             result.locationInsights().forEach(loc -> {

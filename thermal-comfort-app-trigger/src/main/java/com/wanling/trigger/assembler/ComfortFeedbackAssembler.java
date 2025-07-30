@@ -11,6 +11,7 @@ import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
 import com.wanling.trigger.api.dto.ComfortFeedbackDTO;
 import com.wanling.trigger.api.dto.ComfortFeedbackResponseDTO;
 import com.wanling.trigger.api.dto.RawCoordinate;
+import com.wanling.types.security.LoginUserHolder;
 import org.postgresql.util.PGobject;
 
 /**
@@ -25,7 +26,7 @@ public class ComfortFeedbackAssembler {
     public static ComfortFeedbackEntity toEntity(ComfortFeedbackDTO dto) {
         return ComfortFeedbackEntity.builder()
                                     .feedbackId(null) // set later
-                                    .userId(null)     // set later from context
+                                    .userId(LoginUserHolder.get().userId())     // set later from context
                                     .timestamp(LocalDateTime.ofInstant(
                                             Instant.ofEpochMilli(dto.timestamp()), ZoneId.systemDefault()))
                                     .comfortLevel(dto.comfortLevel())
@@ -46,9 +47,13 @@ public class ComfortFeedbackAssembler {
 
     public static ComfortFeedbackResponseDTO toResponseDTO(ComfortFeedbackEntity entity) {
         return ComfortFeedbackResponseDTO.builder()
+                                         .feedbackId(entity.getFeedbackId())
                                          .comfortLevel(entity.getComfortLevel())
                                          .feedbackType(entity.getFeedbackType())
-                                         .timestamp(entity.getTimestamp().toInstant(ZoneOffset.UTC).toEpochMilli())
+                                         .timestamp(entity.getTimestamp()
+                                                          .atZone(ZoneId.systemDefault()) // ← 这里用系统默认时区
+                                                          .toInstant()
+                                                          .toEpochMilli())
                                          .locationDisplayName(entity.getLocationDisplayName())
                                          .isCustomLocation(entity.isCustomLocation())
                                          .customTagName(entity.getCustomTagName().orElse(null))
@@ -64,6 +69,26 @@ public class ComfortFeedbackAssembler {
                                          .build();
     }
 
+    public static ComfortFeedbackEntity toPartialEntityForUpdate(ComfortFeedbackResponseDTO dto, String userId) {
+        return ComfortFeedbackEntity.builder()
+                                    .feedbackId(dto.feedbackId())
+                                    .userId(userId)
+                                    .timestamp(LocalDateTime.ofInstant(
+                                            Instant.ofEpochMilli(dto.timestamp()), ZoneId.systemDefault()))
+                                    .comfortLevel(dto.comfortLevel())
+                                    .feedbackType(dto.feedbackType())
+                                    .activityTypeId(Optional.ofNullable(dto.activityTypeId()))
+                                    .clothingLevel(Optional.ofNullable(dto.clothingLevel()))
+                                    .adjustedTempLevel(Optional.ofNullable(dto.adjustedTempLevel()))
+                                    .adjustedHumidLevel(Optional.ofNullable(dto.adjustedHumidLevel()))
+                                    .notes(Optional.ofNullable(dto.notes()))
+                                    .customTagName(Optional.ofNullable(dto.customTagName()))
+                                    .locationDisplayName(dto.locationDisplayName())
+                                    .isCustomLocation(Boolean.TRUE.equals(dto.isCustomLocation()))
+                                    .rawLatitude(Optional.ofNullable(dto.rawCoordinates().latitude()))
+                                    .rawLongitude(Optional.ofNullable(dto.rawCoordinates().longitude()))
+                                    .build(); // 👈 其他字段由 Service 层查旧值补上
+    }
 
     public static RawCoordinate convertCoordinates(Object raw) {
         if (raw == null) return null;

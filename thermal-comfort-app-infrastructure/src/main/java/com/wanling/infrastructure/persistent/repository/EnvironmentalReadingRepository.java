@@ -44,6 +44,7 @@ public class EnvironmentalReadingRepository implements IEnvironmentalReadingRepo
             reading.setSensorId(entity.getSensorId());
             reading.setLocationTagId(entity.getLocationTagId());
             reading.setRawCoordinates(entity.getRawCoordinates());
+            reading.setUserId(entity.getUserId());
             return reading;
         }).collect(Collectors.toList());
         for (EnvironmentalReadings po : poList) {

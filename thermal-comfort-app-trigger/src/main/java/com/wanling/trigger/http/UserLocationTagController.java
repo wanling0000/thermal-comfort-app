@@ -13,6 +13,7 @@ import com.wanling.trigger.api.dto.UserLocationTagCreateDTO;
 import com.wanling.trigger.assembler.LocationAssembler;
 import com.wanling.types.enums.ResponseCode;
 import com.wanling.types.model.Response;
+import com.wanling.types.security.LoginUserHolder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,7 +33,8 @@ public class UserLocationTagController {
     private final IUserLocationService userLocationService;
 
     @GetMapping("/preview")
-    public List<LocationPreviewDTO> getPreview(@RequestParam String userId) {
+    public List<LocationPreviewDTO> getPreview() {
+        String userId = LoginUserHolder.get().userId();
         return userLocationService.findAllByUserId(userId)
                                   .stream()
                                   .map(LocationAssembler::toDTO)
@@ -47,10 +49,17 @@ public class UserLocationTagController {
             ? LocationAssembler.toCandidate(dto.getLocation())
             : null;
 
-        // TODO: 实际场景应从登录态中获取 userId，这里简化写死
-        String userId = "admin";
+        if (location != null) {
+            location.setIsCustom(true);       // 明确标记为自定义位置
+            location.setCustomTag(dto.getName());  // 使用用户命名的 tag 名
+        }
 
-        String tagId = userLocationService.createCustomTag(userId, dto.getName(), Optional.ofNullable(location));
+        String userId = LoginUserHolder.get().userId();
+
+        String tagId = userLocationService.createCustomTag(
+                userId,
+                dto.getName(),
+                Optional.ofNullable(location));
 
         return Response.<String>builder()
                        .code(ResponseCode.SUCCESS.getCode())

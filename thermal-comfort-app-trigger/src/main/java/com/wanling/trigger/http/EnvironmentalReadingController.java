@@ -20,6 +20,7 @@ import com.wanling.trigger.api.dto.EnvironmentalReadingDTO;
 import com.wanling.trigger.assembler.EnvironmentalReadingAssembler;
 import com.wanling.types.enums.ResponseCode;
 import com.wanling.types.model.Response;
+import com.wanling.types.security.LoginUserHolder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -38,10 +39,11 @@ public class EnvironmentalReadingController implements IEnvironmentReading {
 
     @PostMapping("/upload")
     public Response<String> uploadReadings(@RequestBody List<EnvironmentalReadingDTO> dtoList) {
-        log.debug("✅ Received readings from frontend: {}", JSON.toJSONString(dtoList));
+        log.info("✅ Received readings from frontend: {}", JSON.toJSONString(dtoList));
 
+        String userId = LoginUserHolder.get().userId();
         List<EnvironmentalReadingEntity> entities = dtoList.stream()
-                                                           .map(EnvironmentalReadingAssembler::toEntity)
+                                                           .map(dto -> EnvironmentalReadingAssembler.toEntity(dto, userId))
                                                            .toList();
 
         readingService.uploadReadings(entities);

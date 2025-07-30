@@ -1,5 +1,8 @@
 package com.wanling.domain.environmental.service.impl;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -19,15 +22,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-/**
- * @Author
- * fwl
- * @Description
- * @Date
- * 22/05/2025
- * 12:30
- */
-
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -43,8 +37,7 @@ public class ComfortFeedbackServiceImpl implements IComfortFeedbackService {
         String feedbackId = feedback.getFeedbackId() != null
                 ? feedback.getFeedbackId()
                 : UUID.randomUUID().toString();
-
-        String userId = "admin"; // TODO: replace with actual authenticated user
+        String userId = feedback.getUserId();
 
         // 1: Prepare location candidate from reading, NOT from feedback
         LocationCandidateVO loc = reading.getLocation();
@@ -62,10 +55,10 @@ public class ComfortFeedbackServiceImpl implements IComfortFeedbackService {
                 locationTagId = existing.get().getRelatedLocationTagId();
             } else {
                 userLocationTagId = userLocationService.createCustomTag(userId, tagName, Optional.of(loc));
-                locationTagId = locationTagService.findOrCreate(loc);
+                locationTagId = locationTagService.normalizeAndFindOrCreate(loc, userId);
             }
         } else {
-            locationTagId = locationTagService.findOrCreate(loc);
+            locationTagId = locationTagService.normalizeAndFindOrCreate(loc, userId);
         }
 
         // 3: Save the reading with associated location
@@ -87,9 +80,14 @@ public class ComfortFeedbackServiceImpl implements IComfortFeedbackService {
         log.info("Feedback and reading saved. FeedbackId={}, ReadingId={}", feedbackId, reading.getReadingId());
     }
 
-    public List<ComfortFeedbackEntity> getAllFeedback() {
-        String userId = "admin";
-        List<ComfortFeedbackEntity> comfortFeedbackEntityList = feedbackRepository.findAllByUserIdOrderByTimestampDesc(userId);
+    public List<ComfortFeedbackEntity> getFeedbackByMonth(int year, int month, String userId) {
+        LocalDate start = LocalDate.of(year, month, 1);
+        LocalDate end = start.plusMonths(1).minusDays(1);
+        List<ComfortFeedbackEntity> comfortFeedbackEntityList =
+                new ArrayList<>(feedbackRepository.findByUserAndDateRange(userId, start, end));
+
+        Collections.reverse(comfortFeedbackEntityList);
+
         return comfortFeedbackEntityList.stream()
                                         .map(e -> {
                                             final String[] displayName = {"(unknown location)"};
@@ -136,8 +134,7 @@ public class ComfortFeedbackServiceImpl implements IComfortFeedbackService {
     }
 
     @Override
-    public ComfortFeedbackEntity findLatestFeedbackForCurrentUser() {
-        String userId = "admin";
+    public ComfortFeedbackEntity findLatestFeedbackForCurrentUser(String userId) {
         Optional<ComfortFeedbackEntity> optional = feedbackRepository.findLatestByUserId(userId);
 
         if (optional.isEmpty()) {
@@ -168,5 +165,92 @@ public class ComfortFeedbackServiceImpl implements IComfortFeedbackService {
                 .locationDisplayName(displayName[0])
                 .customTagName(customName[0])
                 .build();
+    }
+
+    @Override
+    public void deleteFeedback(String id, String userId) {
+        Optional<ComfortFeedbackEntity> optional = feedbackRepository.findById(id);
+
+        if (optional.isEmpty()) {
+            log.warn("❌ Feedback not found, id = {}", id);
+            throw new RuntimeException("Feedback not found");
+        }
+
+        ComfortFeedbackEntity entity = optional.get();
+
+        // 安全性检查：只能删除自己的反馈
+        if (!entity.getUserId().equals(userId)) {
+            log.warn("⛔ Unauthorized delete attempt. userId = {}, feedback.userId = {}", userId, entity.getUserId());
+            throw new RuntimeException("Unauthorized to delete this feedback");
+        }
+
+        // 删除反馈记录（软删除）
+        feedbackRepository.markAsDeleted(id, userId);
+        log.info("🗑️ Feedback soft-deleted: id = {}, userId = {}", id, userId);
+    }
+
+    @Override
+    public void updateFeedback(ComfortFeedbackEntity partialEntity) {
+        String feedbackId = partialEntity.getFeedbackId();
+        String userId = partialEntity.getUserId();
+
+        ComfortFeedbackEntity existing = feedbackRepository.findById(feedbackId)
+                                                           .filter(e -> e.getUserId().equals(userId))
+                                                           .orElseThrow(() -> new RuntimeException("Feedback not found or unauthorized"));
+
+        // Step 1️⃣ 解析用户上传的 raw 经纬度 → 构建 LocationCandidateVO
+        Optional<Double> latOpt = partialEntity.getRawLatitude();
+        Optional<Double> lonOpt = partialEntity.getRawLongitude();
+
+        if (latOpt.isEmpty() || lonOpt.isEmpty()) {
+            throw new IllegalArgumentException("Missing coordinates");
+        }
+
+        LocationCandidateVO location = LocationCandidateVO.builder()
+                                                          .latitude(latOpt.get())
+                                                          .longitude(lonOpt.get())
+                                                          .displayName(partialEntity.getLocationDisplayName())
+                                                          .customTag(partialEntity.getCustomTagName().orElse(null))
+                                                          .isCustom(partialEntity.isCustomLocation())
+                                                          .build();
+
+        // Step 2️⃣ 绑定 locationTagId / userLocationTagId（与创建逻辑相同）
+        String locationTagId;
+        String userLocationTagId = null;
+
+        if (location.isCustom() != null && location.isCustom() && location.getCustomTag() != null) {
+            Optional<UserLocationTagEntity> existingTag = userLocationService.findByUserAndName(userId, location.getCustomTag());
+
+            if (existingTag.isPresent()) {
+                userLocationTagId = existingTag.get().getUserLocationTagId();
+                locationTagId = existingTag.get().getRelatedLocationTagId();
+            } else {
+                userLocationTagId = userLocationService.createCustomTag(userId, location.getCustomTag(), Optional.of(location));
+                locationTagId = locationTagService.normalizeAndFindOrCreate(location, userId);
+            }
+        } else {
+            locationTagId = locationTagService.normalizeAndFindOrCreate(location, userId);
+        }
+
+        // Step 3️⃣ 构建可更新字段（类似 partial update）
+        ComfortFeedbackEntity updated = existing.toBuilder()
+                                                .timestamp(partialEntity.getTimestamp())
+                                                .comfortLevel(partialEntity.getComfortLevel())
+                                                .feedbackType(partialEntity.getFeedbackType())
+                                                .activityTypeId(partialEntity.getActivityTypeId())
+                                                .clothingLevel(partialEntity.getClothingLevel())
+                                                .adjustedTempLevel(partialEntity.getAdjustedTempLevel())
+                                                .adjustedHumidLevel(partialEntity.getAdjustedHumidLevel())
+                                                .notes(partialEntity.getNotes())
+                                                .rawLatitude(partialEntity.getRawLatitude())
+                                                .rawLongitude(partialEntity.getRawLongitude())
+                                                .locationTagId(locationTagId)
+                                                .userLocationTagId(Optional.ofNullable(userLocationTagId))
+                                                .build();
+
+        feedbackRepository.updateEditableFields(updated);
+
+        log.info("✅ Feedback updated: feedbackId={}, locationTagId={}, userTag={}",
+                feedbackId, locationTagId, userLocationTagId);
     }
 }

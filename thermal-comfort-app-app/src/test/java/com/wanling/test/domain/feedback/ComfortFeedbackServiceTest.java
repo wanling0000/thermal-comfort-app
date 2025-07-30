@@ -7,7 +7,6 @@ import javax.annotation.Resource;
 import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
 import com.wanling.domain.environmental.repository.IComfortFeedbackRepository;
 import com.wanling.domain.environmental.service.IComfortFeedbackService;
-import com.wanling.trigger.api.dto.ComfortFeedbackDTO;
 import com.wanling.trigger.api.dto.ComfortFeedbackResponseDTO;
 import com.wanling.trigger.assembler.ComfortFeedbackAssembler;
 import lombok.extern.slf4j.Slf4j;
@@ -18,16 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.when;
 
-/**
- * @Author
- * fwl
- * @Description
- * @Date
- * 19/06/2025
- * 17:10
- */
 @Slf4j
 @SpringBootTest
 public class ComfortFeedbackServiceTest {
@@ -38,7 +28,8 @@ public class ComfortFeedbackServiceTest {
     private IComfortFeedbackRepository repository;
     @Test
     void shouldReturnAllStructuredFeedbacks() {
-        List<ComfortFeedbackEntity> list = service.getAllFeedback();
+        String userId = "8d468f7b-03f6-4760-a4b8-220e175b232c";
+        List<ComfortFeedbackEntity> list = service.getFeedbackByMonth(2025, 5, userId);
 
         for (ComfortFeedbackEntity e : list) {
             System.out.printf(
@@ -67,7 +58,8 @@ public class ComfortFeedbackServiceTest {
 
     @Test
     void shouldConvertEntityToResponseDTOAndPrint() {
-        List<ComfortFeedbackEntity> entities = service.getAllFeedback();
+        String userId = "8d468f7b-03f6-4760-a4b8-220e175b232c";
+        List<ComfortFeedbackEntity> entities = service.getFeedbackByMonth(2025, 7, userId);
         List<ComfortFeedbackResponseDTO> dtos = entities.stream()
                                                         .map(ComfortFeedbackAssembler::toResponseDTO)
                                                         .toList();
@@ -76,7 +68,7 @@ public class ComfortFeedbackServiceTest {
             System.out.println("🎯 DTO = " + dto);
         }
 
-        assertFalse(dtos.isEmpty()); // 确保转换结果不为空
+        assertFalse(dtos.isEmpty());
     }
 
 }

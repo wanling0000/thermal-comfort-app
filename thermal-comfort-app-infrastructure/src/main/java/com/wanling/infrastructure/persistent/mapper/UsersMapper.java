@@ -1,14 +1,14 @@
 package com.wanling.infrastructure.persistent.mapper;
 
-import com.wanling.infrastructure.persistent.po.Users;
+import java.util.Optional;
 
-/**
-* @author fwl
-* @description 针对表【users】的数据库操作Mapper
-* @createDate 2025-05-05 22:10:48
-* @Entity com.wanling.infrastructure.persistent.po.Users
-*/
-public interface UsersMapper {
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.wanling.infrastructure.persistent.po.Users;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+@Mapper
+public interface UsersMapper extends BaseMapper<Users> {
 
     int deleteByPrimaryKey(Long id);
 
@@ -16,10 +16,11 @@ public interface UsersMapper {
 
     int insertSelective(Users record);
 
-    Users selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Users record);
 
     int updateByPrimaryKey(Users record);
-
+    Optional<Users> findByUsername(@Param("username") String username);
+    Optional<Users> findByEmail(@Param("email") String email);
+    Optional<Users> findById(String userId);
 }

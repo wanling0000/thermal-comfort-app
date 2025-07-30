@@ -60,7 +60,11 @@ public class ComfortFeedbackRepository implements IComfortFeedbackRepository {
         po.setUserLocationTagId(entity.getUserLocationTagId().orElse(null));
         po.setReadingId(entity.getReadingId());
 
-        po.setRawCoordinates(String.format("POINT(%f %f)", entity.getRawLongitude(), entity.getRawLatitude()));
+        entity.getRawLongitude().ifPresent(lon ->
+                entity.getRawLatitude().ifPresent(lat ->
+                        po.setRawCoordinates(String.format("POINT(%f %f)", lon, lat))
+                )
+        );
 
         comfortFeedbackMapper.insert(po);
     }
@@ -171,6 +175,53 @@ public class ComfortFeedbackRepository implements IComfortFeedbackRepository {
                      .map(this::toEntity)
                      .toList();
     }
+
+    @Override
+    public Optional<ComfortFeedbackEntity> findById(String id) {
+        ComfortFeedback po = comfortFeedbackMapper.selectByIdAndNotDeleted(id);
+        return Optional.ofNullable(po).map(this::toEntity);
+    }
+
+    @Override
+    public void markAsDeleted(String id, String userId) {
+        comfortFeedbackMapper.markAsDeleted(id, userId);
+    }
+
+    @Override
+    public void updateEditableFields(ComfortFeedbackEntity entity) {
+        ComfortFeedback po = new ComfortFeedback();
+
+        // 主键：必须要有，用于 where 条件
+        po.setFeedbackId(entity.getFeedbackId());
+
+        // ✅ 用户可编辑字段
+        po.setTimestamp(entity.getTimestamp());
+        po.setComfortLevel(entity.getComfortLevel());
+        po.setFeedbackType(entity.getFeedbackType());
+
+        po.setActivityTypeId(entity.getActivityTypeId().orElse(null));
+        po.setClothingLevel(entity.getClothingLevel().orElse(null));
+        po.setAdjustedTempLevel(entity.getAdjustedTempLevel().orElse(null));
+        po.setAdjustedHumidLevel(entity.getAdjustedHumidLevel().orElse(null));
+        po.setNotes(entity.getNotes().orElse(null));
+
+        // ✅ 经纬度 → rawCoordinates（WKT 格式）
+        if (entity.getRawLongitude().isPresent() && entity.getRawLatitude().isPresent()) {
+            double lon = entity.getRawLongitude().get();
+            double lat = entity.getRawLatitude().get();
+            po.setRawCoordinates(String.format("POINT(%f %f)", lon, lat));
+        }
+
+        // ✅ 已经在 service 中通过地点逻辑判断出结果
+        po.setLocationTagId(entity.getLocationTagId());
+        po.setUserLocationTagId(entity.getUserLocationTagId().orElse(null));
+
+        // ⚠️ 注意：不能动 readingId，它不是可编辑字段，此处不设即可
+
+        // 调用 mapper 执行部分字段更新（注意你使用的是 MyBatis xml 中的 <if> 标签）
+        comfortFeedbackMapper.updateByPrimaryKeySelective(po);
+    }
+
 
     private ComfortFeedbackEntity toEntity(ComfortFeedback po) {
         Optional<String> userLocationTagId = Optional.ofNullable(po.getUserLocationTagId());

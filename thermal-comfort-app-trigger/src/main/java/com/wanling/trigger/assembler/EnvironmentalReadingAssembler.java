@@ -10,7 +10,7 @@ import com.wanling.trigger.api.dto.EnvironmentalReadingDTO;
 import com.wanling.trigger.api.dto.LocationDTO;
 
 public class EnvironmentalReadingAssembler {
-    public static EnvironmentalReadingEntity toEntity(EnvironmentalReadingDTO dto) {
+    public static EnvironmentalReadingEntity toEntity(EnvironmentalReadingDTO dto, String userId) {
         LocationCandidateVO candidate = null;
 
         if (dto.location() != null) {
@@ -37,6 +37,7 @@ public class EnvironmentalReadingAssembler {
                                          .sensorId(dto.sensorId())
                                          .location(candidate)
                                          .rawCoordinates(coordinates)
+                                         .userId(userId)
                                          .build();
     }
 

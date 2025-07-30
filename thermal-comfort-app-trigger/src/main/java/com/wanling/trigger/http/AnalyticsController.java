@@ -16,6 +16,7 @@ import com.wanling.trigger.assembler.AnalyticsAssembler;
 import com.wanling.types.enums.Resolution;
 import com.wanling.types.enums.ResponseCode;
 import com.wanling.types.model.Response;
+import com.wanling.types.security.LoginUserHolder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -33,10 +34,8 @@ public class AnalyticsController {
     private final IAnalyticsService analyticsService;
 
     @GetMapping("/daily")
-    public Response<List<DailyChartPointDTO>> getDailyAnalytics(
-            @RequestParam String userId,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
-
+    public Response<List<DailyChartPointDTO>> getDailyAnalytics(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+        String userId = LoginUserHolder.get().userId();
         log.debug("📊 Request daily analytics for user={}, date={}", userId, date);
 
         List<DailyChartPoint> voList = analyticsService.queryDailyView(userId, date);
@@ -51,12 +50,11 @@ public class AnalyticsController {
                        .build();
     }
 
-    @GetMapping("/weekly")
+    @GetMapping("/week")
     public Response<ComfortStatisticsDTO> getWeeklyComfortStats(
             @RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
     ) {
-//       TODO: String userId = currentUserProvider.getCurrentUserId();
-        String userId = "admin";
+        String userId = LoginUserHolder.get().userId();
         ComfortStatisticsEntity entity = analyticsService.getComfortStatistics(userId, date, Resolution.WEEK);
         ComfortStatisticsDTO dto = AnalyticsAssembler.toComfortStatisticsDTO(entity);
         return Response.<ComfortStatisticsDTO>builder()
@@ -66,12 +64,11 @@ public class AnalyticsController {
                        .build();
     }
 
-    @GetMapping("/monthly")
+    @GetMapping("/month")
     public Response<ComfortStatisticsDTO> getMonthlyComfortStats(
             @RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
     ) {
-//       TODO: String userId = currentUserProvider.getCurrentUserId();
-        String userId = "admin";
+        String userId = LoginUserHolder.get().userId();
         ComfortStatisticsEntity entity = analyticsService.getComfortStatistics(userId, date, Resolution.MONTH);
         ComfortStatisticsDTO dto = AnalyticsAssembler.toComfortStatisticsDTO(entity);
         return Response.<ComfortStatisticsDTO>builder()
@@ -83,9 +80,9 @@ public class AnalyticsController {
 
     @GetMapping("/yearly")
     public Response<YearlyComfortStatsDTO> getYearlyStats(
-            @RequestParam String userId,
             @RequestParam int year
     ) {
+        String userId = LoginUserHolder.get().userId();
         YearlyComfortStatsEntity entity = analyticsService.getYearlyStats(userId, year);
         YearlyComfortStatsDTO dto = AnalyticsAssembler.toYearlyComfortStatsDTO(entity);
         return Response.<YearlyComfortStatsDTO>builder()
@@ -97,10 +94,10 @@ public class AnalyticsController {
 
     @GetMapping("/summary")
     public Response<SummaryInsightResponseDTO> getSummaryInsights(
-            @RequestParam String userId,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
             @RequestParam Resolution resolution
     ) {
+        String userId = LoginUserHolder.get().userId();
         SummaryInsightEntity entity = analyticsService.getSummaryInsights(userId, date, resolution);
         SummaryInsightResponseDTO dto = AnalyticsAssembler.toSummaryInsightDTO(entity);
         return Response.<SummaryInsightResponseDTO>builder()

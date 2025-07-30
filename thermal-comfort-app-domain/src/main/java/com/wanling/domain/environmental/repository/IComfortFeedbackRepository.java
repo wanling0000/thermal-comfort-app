@@ -30,4 +30,10 @@ public interface IComfortFeedbackRepository {
     List<ComfortFeedbackEntity> findByUserAndDate(String userId, LocalDate date);
 
     List<ComfortFeedbackEntity> findByUserAndDateRange(String userId, LocalDate start, LocalDate end);
+
+    Optional<ComfortFeedbackEntity> findById(String id);
+
+    void markAsDeleted(String id, String userId);
+
+    void updateEditableFields(ComfortFeedbackEntity partial);
 }

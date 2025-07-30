@@ -59,4 +59,12 @@ public class LocationTagRepository implements ILocationTagRepository {
                                             .createdAt(String.valueOf(po.getCreatedAt()))
                                             .build());
     }
+
+    @Override
+    public void updateIsCustom(String id, boolean isCustom) {
+        LocationTags po = new LocationTags();
+        po.setLocationTagId(id);
+        po.setIsCustom(isCustom);
+        locationTagsMapper.updateByPrimaryKeySelective(po);
+    }
 }

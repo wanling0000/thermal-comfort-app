@@ -10,7 +10,7 @@ import com.wanling.domain.environmental.model.valobj.DailyChartPoint;
 import com.wanling.types.enums.Resolution;
 
 public interface IAnalyticsService {
-    List<DailyChartPoint> queryDailyView(String userId, LocalDate date); // ✅ 只返回 VO
+    List<DailyChartPoint> queryDailyView(String userId, LocalDate date);
 
     ComfortStatisticsEntity getComfortStatistics(String userId, LocalDate date, Resolution resolution);
 

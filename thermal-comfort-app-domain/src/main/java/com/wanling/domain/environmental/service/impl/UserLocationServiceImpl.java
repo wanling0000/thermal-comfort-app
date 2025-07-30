@@ -3,7 +3,6 @@ package com.wanling.domain.environmental.service.impl;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 import com.wanling.domain.environmental.model.entity.LocationTagEntity;
 import com.wanling.domain.environmental.model.entity.UserLocationTagEntity;
@@ -38,7 +37,7 @@ public class UserLocationServiceImpl implements IUserLocationService {
 
         if (locationOpt.isPresent()) {
             LocationCandidateVO location = locationOpt.get();
-            relatedSystemTagId = locationTagService.findOrCreate(location);
+            relatedSystemTagId = locationTagService.normalizeAndFindOrCreate(location, userId);
         }
 
         UserLocationTagEntity tagEntity = UserLocationTagEntity.builder()

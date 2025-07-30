@@ -9,6 +9,7 @@ import com.wanling.domain.environmental.repository.IEnvironmentalReadingReposito
 import com.wanling.domain.environmental.service.IEnvironmentReadingService;
 import com.wanling.domain.environmental.service.ILocationTagService;
 import com.wanling.domain.environmental.service.IUserLocationService;
+import com.wanling.types.security.LoginUserHolder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,7 @@ public class EnvironmentalReadingServiceImpl implements IEnvironmentReadingServi
 
     @Override
     public void uploadReadings(List<EnvironmentalReadingEntity> readings) {
-        String userId = "admin"; // TODO: 暂时写死（之后从 token 里提取）
+        String userId = LoginUserHolder.get().userId();
         for (EnvironmentalReadingEntity reading : readings) {
             reading.setUserId(userId);
             LocationCandidateVO location = reading.getLocation();
@@ -32,14 +33,7 @@ public class EnvironmentalReadingServiceImpl implements IEnvironmentReadingServi
                 continue;
             }
 
-            String locationTagId;
-            if (location.getIsCustom() && location.getCustomTag() != null) {
-                locationTagId = userLocationService.resolveToSystemTag(location.getCustomTag())
-                                                   .map(LocationTagEntity::getLocationTagId)
-                                                   .orElse(null);
-            } else {
-                locationTagId = locationTagService.findOrCreate(location);
-            }
+            String locationTagId = locationTagService.normalizeAndFindOrCreate(location, userId);
             reading.setLocationTagId(locationTagId);
         }
 

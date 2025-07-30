@@ -13,7 +13,7 @@ public interface IUserLocationService {
     /**
      * Create a user-defined location tag
      * 1. if the user selects “Bind current location” and passes latitude and longitude:
-     * - Try to find a match in location_tags (call LocationTagService.findOrCreate(...))
+     * - Try to find a match in location_tags (call LocationTagService.normalizeAndFindOrCreate(...))
      * - Set user_location_tags.related_location_tag_id to the ID of the system tag found/created above.
      * 2. And finally return this user_location_tag_id
      */

@@ -5,6 +5,8 @@ import lombok.Builder;
 
 @Builder
 public record ComfortFeedbackResponseDTO(
+        @JsonProperty("feedback_id")
+        String feedbackId,
         @JsonProperty("comfort_level") int comfortLevel,
         @JsonProperty("feedback_type") String feedbackType,
         long timestamp,

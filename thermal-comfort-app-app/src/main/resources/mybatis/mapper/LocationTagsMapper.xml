@@ -84,8 +84,8 @@
     <update id="updateByPrimaryKeySelective" parameterType="com.wanling.infrastructure.persistent.po.LocationTags">
         update location_tags
         <set>
-                <if test="display_name != null">
-                    display_name = #{display_name,jdbcType=VARCHAR},
+                <if test="displayName != null">
+                    display_name = #{displayName,jdbcType=VARCHAR},
                 </if>
                 <if test="latitude != null">
                     latitude = #{latitude,jdbcType=DOUBLE},
@@ -96,14 +96,14 @@
                 <if test="coordinates != null">
                     coordinates = #{coordinates,jdbcType=OTHER},
                 </if>
-                <if test="is_custom != null">
-                    is_custom = #{is_custom,jdbcType=BOOLEAN},
+                <if test="isCustom != null">
+                    is_custom = #{isCustom,jdbcType=BOOLEAN},
                 </if>
-                <if test="created_at != null">
-                    created_at = #{created_at,jdbcType=TIMESTAMP},
+                <if test="createdAt != null">
+                    created_at = #{createdAt,jdbcType=TIMESTAMP},
                 </if>
         </set>
-        where   location_tag_id = #{location_tag_id,jdbcType=VARCHAR} 
+        where   location_tag_id = #{locationTagId,jdbcType=VARCHAR}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.wanling.infrastructure.persistent.po.LocationTags">
         update location_tags
