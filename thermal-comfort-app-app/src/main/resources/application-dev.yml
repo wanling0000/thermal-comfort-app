@@ -61,21 +61,21 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 打印 SQL 日志（开发期用）
     map-underscore-to-camel-case: true                     # 自动驼峰转换（enabled by default）
 
-
-# Redis
-redis:
-  sdk:
-    config:
-      host: 127.0.0.1
-      port: 16379
-      pool-size: 10
-      min-idle-size: 5
-      idle-timeout: 30000
-      connect-timeout: 5000
-      retry-attempts: 3
-      retry-interval: 1000
-      ping-interval: 60000
-      keep-alive: true
+#
+## Redis
+#redis:
+#  sdk:
+#    config:
+#      host: 127.0.0.1
+#      port: 16379
+#      pool-size: 10
+#      min-idle-size: 5
+#      idle-timeout: 30000
+#      connect-timeout: 5000
+#      retry-attempts: 3
+#      retry-interval: 1000
+#      ping-interval: 60000
+#      keep-alive: true
 
 redisson:
   enabled: false
