@@ -61,7 +61,7 @@
         values (
                    #{readingId, jdbcType=VARCHAR}, #{timestamp, jdbcType=TIMESTAMP}, #{temperature, jdbcType=DOUBLE},
                    #{humidity, jdbcType=DOUBLE}, #{sensorId, jdbcType=VARCHAR},
-                   #{locationTagId, jdbcType=VARCHAR},  #{userId, jdbcType=VARCHAR}, ST_GeomFromText(#{rawCoordinates, jdbcType=VARCHAR}, 4326)
+                   #{locationTagId, jdbcType=VARCHAR},  #{userId, jdbcType=VARCHAR}, #{rawCoordinates, jdbcType=VARCHAR}
                )
         on conflict (reading_id) do nothing
         ]]>
