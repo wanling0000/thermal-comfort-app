@@ -29,7 +29,11 @@ public interface EnvironmentalReadingsMapper {
 
     int updateByPrimaryKey(EnvironmentalReadings record);
 
-    List<EnvironmentalReadings> findByUserIdAndTimeRange(String userId, LocalDateTime start, LocalDateTime end);
+    List<EnvironmentalReadings> findByUserIdAndTimeRange(
+            @Param("userId") String userId,
+            @Param("start") LocalDateTime start,
+            @Param("end") LocalDateTime end
+    );
 
-    List<EnvironmentalReadings> findByReadingIds(List<String> readingIds);
+    List<EnvironmentalReadings> findByReadingIds(@Param("readingIds") List<String> readingIds);
 }

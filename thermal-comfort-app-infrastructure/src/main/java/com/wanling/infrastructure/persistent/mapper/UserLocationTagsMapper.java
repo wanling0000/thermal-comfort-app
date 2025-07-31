@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.wanling.infrastructure.persistent.po.UserLocationTags;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
 * @author fwl
@@ -27,7 +28,10 @@ public interface UserLocationTagsMapper {
 
     int updateByPrimaryKey(UserLocationTags record);
 
-    UserLocationTags selectByUserAndName(String userId, String tagName);
+    UserLocationTags selectByUserAndName(
+            @Param("userId") String userId,
+            @Param("tagName") String tagName
+    );
 
     UserLocationTags findById(String userLocationTagId);
 

@@ -35,16 +35,31 @@ public interface ComfortFeedbackMapper {
 
     List<ComfortFeedback> selectMissingReadingId();
 
-    void updateReadingId(String feedbackId, String readingId);
+    void updateReadingId(
+            @Param("feedbackId") String feedbackId,
+            @Param("readingId") String readingId
+    );
+
     List<ComfortFeedback> findAllByUserIdOrderByTimestampDesc(@Param("userId") String userId);
 
     ComfortFeedback findLatestByUserId(String userId);
 
-    List<ComfortFeedback> findByUserIdAndTimeRange(String userId, LocalDateTime from, LocalDateTime to);
+    List<ComfortFeedback> findByUserIdAndTimeRange(
+            @Param("userId") String userId,
+            @Param("from") LocalDateTime from,
+            @Param("to") LocalDateTime to
+    );
 
-    List<DailyComfortStatRow> findDailyStatsForUserInYear(String userId, LocalDate startDate, LocalDate endDate);
+    List<DailyComfortStatRow> findDailyStatsForUserInYear(
+            @Param("userId") String userId,
+            @Param("startDate") LocalDate startDate,
+            @Param("endDate") LocalDate endDate
+    );
 
-    List<ComfortFeedback> selectByUserIdAndDate(String userId, LocalDate date);
+    List<ComfortFeedback> selectByUserIdAndDate(
+            @Param("userId") String userId,
+            @Param("date") LocalDate date
+    );
 
     List<ComfortFeedback> selectByUserIdAndDateRange(
             @Param("userId") String userId,
