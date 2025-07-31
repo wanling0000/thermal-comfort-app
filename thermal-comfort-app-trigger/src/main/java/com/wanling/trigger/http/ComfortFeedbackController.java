@@ -72,6 +72,7 @@ public class ComfortFeedbackController {
             @RequestParam("month") int month
     ) {
         String userId = LoginUserHolder.get().userId();
+        System.out.println("/by-month debug UserId: "+ userId);
         List<ComfortFeedbackEntity> entities = comfortFeedbackService.getFeedbackByMonth(year, month, userId);
 
         List<ComfortFeedbackResponseDTO> dtos = entities.stream()

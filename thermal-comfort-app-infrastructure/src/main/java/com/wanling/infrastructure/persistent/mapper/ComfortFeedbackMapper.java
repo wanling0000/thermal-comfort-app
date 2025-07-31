@@ -46,7 +46,11 @@ public interface ComfortFeedbackMapper {
 
     List<ComfortFeedback> selectByUserIdAndDate(String userId, LocalDate date);
 
-    List<ComfortFeedback> selectByUserIdAndDateRange(String userId, LocalDate start, LocalDate end);
+    List<ComfortFeedback> selectByUserIdAndDateRange(
+            @Param("userId") String userId,
+            @Param("start") LocalDate start,
+            @Param("end") LocalDate end
+    );
 
     void markAsDeleted(@Param("feedbackId") String feedbackId, @Param("userId") String userId);
 
