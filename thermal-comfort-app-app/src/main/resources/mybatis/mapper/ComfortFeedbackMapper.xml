@@ -17,7 +17,7 @@
             <result property="notes" column="notes" jdbcType="VARCHAR"/>
             <result property="locationTagId" column="location_tag_id" jdbcType="VARCHAR"/>
             <result property="readingId" column="reading_id" jdbcType="VARCHAR"/>
-            <result property="rawCoordinates" column="raw_coordinates" jdbcType="OTHER"/>
+            <result property="rawCoordinates" column="raw_coordinates" jdbcType="VARCHAR"/>
             <result property="userLocationTagId" column="user_location_tag_id" jdbcType="VARCHAR"/>
     </resultMap>
 
@@ -128,7 +128,7 @@
                      #{comfortLevel,jdbcType=INTEGER}, #{feedbackType,jdbcType=VARCHAR}, #{activityTypeId,jdbcType=VARCHAR},
                      #{clothingLevel,jdbcType=VARCHAR}, #{adjustedTempLevel,jdbcType=INTEGER}, #{adjustedHumidLevel,jdbcType=INTEGER},
                      #{notes,jdbcType=VARCHAR}, #{locationTagId,jdbcType=VARCHAR}, #{readingId,jdbcType=VARCHAR},
-                     ST_GeomFromText(#{rawCoordinates}, 4326), #{userLocationTagId,jdbcType=VARCHAR}
+                     #{rawCoordinates,jdbcType=VARCHAR}, #{userLocationTagId,jdbcType=VARCHAR}
                  )
     </insert>
 
@@ -163,7 +163,7 @@
                 <if test="notes != null">#{notes,jdbcType=VARCHAR},</if>
                 <if test="location_tag_id != null">#{location_tag_id,jdbcType=VARCHAR},</if>
                 <if test="reading_id != null">#{reading_id,jdbcType=VARCHAR},</if>
-                <if test="raw_coordinates != null">#{raw_coordinates,jdbcType=OTHER},</if>
+                <if test="raw_coordinates != null">#{raw_coordinates,jdbcType=VARCHAR},</if>
                 <if test="user_location_tag_id != null">#{user_location_tag_id,jdbcType=VARCHAR},</if>
         </trim>
     </insert>
@@ -204,7 +204,7 @@
                     reading_id = #{readingId,jdbcType=VARCHAR},
                 </if>
                 <if test="rawCoordinates != null">
-                    raw_coordinates = ST_GeomFromText(#{rawCoordinates}, 4326),
+                    raw_coordinates = #{rawCoordinates, jdbcType=VARCHAR},
                 </if>
                 <if test="userLocationTagId != null">
                     user_location_tag_id = #{userLocationTagId,jdbcType=VARCHAR},
@@ -226,7 +226,7 @@
             notes =  #{notes,jdbcType=VARCHAR},
             location_tag_id =  #{location_tag_id,jdbcType=VARCHAR},
             reading_id =  #{reading_id,jdbcType=VARCHAR},
-            raw_coordinates =  #{raw_coordinates,jdbcType=OTHER},
+            raw_coordinates =  #{raw_coordinates,jdbcType=VARCHAR},
             user_location_tag_id =  #{user_location_tag_id,jdbcType=VARCHAR}
         where   feedback_id = #{feedback_id,jdbcType=VARCHAR} 
     </update>

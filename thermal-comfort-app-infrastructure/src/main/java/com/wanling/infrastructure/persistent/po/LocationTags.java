@@ -38,7 +38,7 @@ public class LocationTags implements Serializable {
     /**
      * 
      */
-    private Object coordinates;
+    private String coordinates;
 
     /**
      * 

@@ -10,7 +10,7 @@
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="latitude" column="latitude" jdbcType="DOUBLE"/>
             <result property="longitude" column="longitude" jdbcType="DOUBLE"/>
-            <result property="coordinates" column="coordinates" jdbcType="OTHER"/>
+            <result property="coordinates" column="coordinates" jdbcType="VARCHAR"/>
             <result property="relatedLocationTagId" column="related_location_tag_id" jdbcType="VARCHAR"/>
             <result property="note" column="note" jdbcType="VARCHAR"/>
             <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
@@ -62,7 +62,7 @@
                 <if test="name != null">#{name,jdbcType=VARCHAR},</if>
                 <if test="latitude != null">#{latitude,jdbcType=DOUBLE},</if>
                 <if test="longitude != null">#{longitude,jdbcType=DOUBLE},</if>
-                <if test="coordinates != null">#{coordinates,jdbcType=OTHER},</if>
+                <if test="coordinates != null">#{coordinates,jdbcType=VARCHAR},</if>
                 <if test="related_location_tag_id != null">#{relatedLocationTagId,jdbcType=VARCHAR},</if>
                 <if test="note != null">#{note,jdbcType=VARCHAR},</if>
                 <if test="created_at != null">#{createdAt,jdbcType=TIMESTAMP},</if>
@@ -84,7 +84,7 @@
                     longitude = #{longitude,jdbcType=DOUBLE},
                 </if>
                 <if test="coordinates != null">
-                    coordinates = #{coordinates,jdbcType=OTHER},
+                    coordinates = #{coordinates,jdbcType=VARCHAR},
                 </if>
                 <if test="related_location_tag_id != null">
                     related_location_tag_id = #{related_location_tag_id,jdbcType=VARCHAR},
@@ -105,7 +105,7 @@
             name =  #{name,jdbcType=VARCHAR},
             latitude =  #{latitude,jdbcType=DOUBLE},
             longitude =  #{longitude,jdbcType=DOUBLE},
-            coordinates =  #{coordinates,jdbcType=OTHER},
+            coordinates =  #{coordinates,jdbcType=VARCHAR},
             related_location_tag_id =  #{related_location_tag_id,jdbcType=VARCHAR},
             note =  #{note,jdbcType=VARCHAR},
             created_at =  #{created_at,jdbcType=TIMESTAMP}

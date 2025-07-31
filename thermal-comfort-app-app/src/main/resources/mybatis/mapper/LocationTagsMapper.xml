@@ -9,7 +9,7 @@
             <result property="displayName" column="display_name" jdbcType="VARCHAR"/>
             <result property="latitude" column="latitude" jdbcType="DOUBLE"/>
             <result property="longitude" column="longitude" jdbcType="DOUBLE"/>
-            <result property="coordinates" column="coordinates" jdbcType="OTHER"/>
+            <result property="coordinates" column="coordinates" jdbcType="VARCHAR"/>
             <result property="isCustom" column="is_custom" jdbcType="BOOLEAN"/>
             <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
     </resultMap>
@@ -24,11 +24,8 @@
         SELECT *
         FROM location_tags
         WHERE display_name = #{displayName}
-          AND ST_DWithin(
-                coordinates,
-                ST_SetSRID(ST_MakePoint(#{longitude}, #{latitude}), 4326),
-                50
-            )
+        AND ABS(latitude - #{latitude}) < 0.0005
+        AND ABS(longitude - #{longitude}) < 0.0005
         LIMIT 1
     </select>
 
@@ -57,7 +54,7 @@
         ,longitude,coordinates,is_custom
         ,created_at)
         values (#{location_tag_id,jdbcType=VARCHAR},#{display_name,jdbcType=VARCHAR},#{latitude,jdbcType=DOUBLE}
-        ,#{longitude,jdbcType=DOUBLE},#{coordinates,jdbcType=OTHER},#{is_custom,jdbcType=BOOLEAN}
+        ,#{longitude,jdbcType=DOUBLE},#{coordinates,jdbcType=VARCHAR},#{is_custom,jdbcType=BOOLEAN}
         ,#{created_at,jdbcType=TIMESTAMP})
     </insert>
     <insert id="insertSelective" keyColumn="location_tag_id" keyProperty="location_tag_id" parameterType="com.wanling.infrastructure.persistent.po.LocationTags" useGeneratedKeys="true">
@@ -76,7 +73,7 @@
                 <if test="display_name != null">#{display_name,jdbcType=VARCHAR},</if>
                 <if test="latitude != null">#{latitude,jdbcType=DOUBLE},</if>
                 <if test="longitude != null">#{longitude,jdbcType=DOUBLE},</if>
-                <if test="coordinates != null">#{coordinates,jdbcType=OTHER},</if>
+                <if test="coordinates != null">#{coordinates,jdbcType=VARCHAR},</if>
                 <if test="is_custom != null">#{is_custom,jdbcType=BOOLEAN},</if>
                 <if test="created_at != null">#{created_at,jdbcType=TIMESTAMP},</if>
         </trim>
@@ -94,7 +91,7 @@
                     longitude = #{longitude,jdbcType=DOUBLE},
                 </if>
                 <if test="coordinates != null">
-                    coordinates = #{coordinates,jdbcType=OTHER},
+                    coordinates = #{coordinates,jdbcType=VARCHAR},
                 </if>
                 <if test="isCustom != null">
                     is_custom = #{isCustom,jdbcType=BOOLEAN},
@@ -111,7 +108,7 @@
             display_name =  #{display_name,jdbcType=VARCHAR},
             latitude =  #{latitude,jdbcType=DOUBLE},
             longitude =  #{longitude,jdbcType=DOUBLE},
-            coordinates =  #{coordinates,jdbcType=OTHER},
+            coordinates =  #{coordinates,jdbcType=VARCHAR},
             is_custom =  #{is_custom,jdbcType=BOOLEAN},
             created_at =  #{created_at,jdbcType=TIMESTAMP}
         where   location_tag_id = #{location_tag_id,jdbcType=VARCHAR} 
