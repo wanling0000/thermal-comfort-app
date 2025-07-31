@@ -270,29 +270,39 @@ public class ComfortFeedbackRepository implements IComfortFeedbackRepository {
                                     .build();
     }
 
-    private Optional<Double> extractLatitude(String wkbHex) {
-        if (wkbHex == null) return Optional.empty();
+    private Optional<Double> extractLatitude(String input) {
+        if (input == null) return Optional.empty();
+
         try {
-            byte[] wkb = WKBReader.hexToBytes(wkbHex); // 注意这里
-            WKBReader reader = new WKBReader();
-            Point point = (Point) reader.read(wkb);
-            return Optional.of(point.getY());
+            if (input.startsWith("POINT(")) {
+                String[] parts = input.substring(6, input.length() - 1).split(" ");
+                return Optional.of(Double.parseDouble(parts[1]));
+            } else {
+                // 兼容旧的 HEX 格式
+                byte[] wkb = WKBReader.hexToBytes(input);
+                WKBReader reader = new WKBReader();
+                Point point = (Point) reader.read(wkb);
+                return Optional.of(point.getY());
+            }
         } catch (Exception e) {
-            e.printStackTrace();
             return Optional.empty();
         }
     }
 
+    private Optional<Double> extractLongitude(String input) {
+        if (input == null) return Optional.empty();
 
-    private Optional<Double> extractLongitude(String wkbHex) {
-        if (wkbHex == null) return Optional.empty();
         try {
-            byte[] wkb = WKBReader.hexToBytes(wkbHex); // 注意这里
-            WKBReader reader = new WKBReader();
-            Point point = (Point) reader.read(wkb);
-            return Optional.of(point.getX());
+            if (input.startsWith("POINT(")) {
+                String[] parts = input.substring(6, input.length() - 1).split(" ");
+                return Optional.of(Double.parseDouble(parts[0]));
+            } else {
+                byte[] wkb = WKBReader.hexToBytes(input);
+                WKBReader reader = new WKBReader();
+                Point point = (Point) reader.read(wkb);
+                return Optional.of(point.getX());
+            }
         } catch (Exception e) {
-            e.printStackTrace();
             return Optional.empty();
         }
     }
