@@ -10,6 +10,7 @@ import java.util.UUID;
 import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
 import com.wanling.domain.environmental.model.entity.EnvironmentalReadingEntity;
 import com.wanling.domain.environmental.model.entity.UserLocationTagEntity;
+import com.wanling.domain.environmental.model.valobj.ComfortFeedbackWithReadingVO;
 import com.wanling.domain.environmental.model.valobj.LocationCandidateVO;
 import com.wanling.domain.environmental.repository.IComfortFeedbackRepository;
 import com.wanling.domain.environmental.repository.IEnvironmentalReadingRepository;
@@ -80,7 +81,7 @@ public class ComfortFeedbackServiceImpl implements IComfortFeedbackService {
         log.info("Feedback and reading saved. FeedbackId={}, ReadingId={}", feedbackId, reading.getReadingId());
     }
 
-    public List<ComfortFeedbackEntity> getFeedbackByMonth(int year, int month, String userId) {
+    public List<ComfortFeedbackWithReadingVO> getFeedbackByMonth(int year, int month, String userId) {
         LocalDate start = LocalDate.of(year, month, 1);
         LocalDate end = start.plusMonths(1).minusDays(1);
         List<ComfortFeedbackEntity> comfortFeedbackEntityList =
@@ -108,29 +109,39 @@ public class ComfortFeedbackServiceImpl implements IComfortFeedbackService {
                                                     }
                                                 });
                                             });
+// 3. 查温湿度数据（readingId）
+                                            Optional<Double> temperature = Optional.empty();
+                                            Optional<Double> humidity = Optional.empty();
+                                            EnvironmentalReadingEntity reading = readingRepository.findById(e.getReadingId());
+                                            if (reading != null) {
+                                                temperature = Optional.ofNullable(reading.getTemperature());
+                                                humidity = Optional.ofNullable(reading.getHumidity());
+                                            }
 
-                                            return ComfortFeedbackEntity.builder()
-                                                                        .feedbackId(e.getFeedbackId())
-                                                                        .userId(e.getUserId())
-                                                                        .timestamp(e.getTimestamp())
-                                                                        .comfortLevel(e.getComfortLevel())
-                                                                        .feedbackType(e.getFeedbackType())
-                                                                        .activityTypeId(e.getActivityTypeId())
-                                                                        .clothingLevel(e.getClothingLevel())
-                                                                        .adjustedTempLevel(e.getAdjustedTempLevel())
-                                                                        .adjustedHumidLevel(e.getAdjustedHumidLevel())
-                                                                        .notes(e.getNotes())
-                                                                        .locationTagId(e.getLocationTagId())
-                                                                        .userLocationTagId(e.getUserLocationTagId())
-                                                                        .readingId(e.getReadingId())
-                                                                        .rawLatitude(e.getRawLatitude())
-                                                                        .rawLongitude(e.getRawLongitude())
-                                                                        .locationDisplayName(displayName[0])
-                                                                        .isCustomLocation(e.isCustomLocation())
-                                                                        .customTagName(customName[0])
-                                                                        .build();
-                                        })
-                                        .toList();
+                                            // 4. 构建 VO（用你前面定义好的类）
+                                            return ComfortFeedbackWithReadingVO.builder()
+                                                                               .feedbackId(e.getFeedbackId())
+                                                                               .userId(e.getUserId())
+                                                                               .timestamp(e.getTimestamp())
+                                                                               .comfortLevel(e.getComfortLevel())
+                                                                               .feedbackType(e.getFeedbackType())
+                                                                               .activityTypeId(e.getActivityTypeId())
+                                                                               .clothingLevel(e.getClothingLevel())
+                                                                               .adjustedTempLevel(e.getAdjustedTempLevel())
+                                                                               .adjustedHumidLevel(e.getAdjustedHumidLevel())
+                                                                               .notes(e.getNotes())
+                                                                               .locationTagId(e.getLocationTagId())
+                                                                               .userLocationTagId(e.getUserLocationTagId())
+                                                                               .readingId(e.getReadingId())
+                                                                               .rawLatitude(e.getRawLatitude())
+                                                                               .rawLongitude(e.getRawLongitude())
+                                                                               .locationDisplayName(displayName[0])
+                                                                               .isCustomLocation(e.isCustomLocation())
+                                                                               .customTagName(customName[0])
+                                                                               .temperature(temperature)
+                                                                               .humidity(humidity)
+                                                                               .build();
+                                        }).toList();
     }
 
     @Override

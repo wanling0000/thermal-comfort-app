@@ -8,8 +8,10 @@ import java.util.Map;
 import java.util.Optional;
 
 import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
+import com.wanling.domain.environmental.model.valobj.ComfortFeedbackWithReadingVO;
 import com.wanling.trigger.api.dto.ComfortFeedbackDTO;
 import com.wanling.trigger.api.dto.ComfortFeedbackResponseDTO;
+import com.wanling.trigger.api.dto.ComfortFeedbackWithReadingDTO;
 import com.wanling.trigger.api.dto.RawCoordinate;
 import com.wanling.types.security.LoginUserHolder;
 import org.postgresql.util.PGobject;
@@ -88,6 +90,29 @@ public class ComfortFeedbackAssembler {
                                     .rawLatitude(Optional.ofNullable(dto.rawCoordinates().latitude()))
                                     .rawLongitude(Optional.ofNullable(dto.rawCoordinates().longitude()))
                                     .build(); // 👈 其他字段由 Service 层查旧值补上
+    }
+
+    public static ComfortFeedbackWithReadingDTO toResponseDTO(ComfortFeedbackWithReadingVO vo) {
+        return ComfortFeedbackWithReadingDTO.builder()
+                                            .feedbackId(vo.getFeedbackId())
+                                            .comfortLevel(vo.getComfortLevel())
+                                            .feedbackType(vo.getFeedbackType())
+                                            .timestamp(vo.getTimestamp().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli())
+                                            .locationDisplayName(vo.getLocationDisplayName())
+                                            .isCustomLocation(vo.isCustomLocation())
+                                            .customTagName(vo.getCustomTagName().orElse(null))
+                                            .rawCoordinates(RawCoordinate.builder()
+                                                                         .latitude(vo.getRawLatitude().orElse(null))
+                                                                         .longitude(vo.getRawLongitude().orElse(null))
+                                                                         .build())
+                                            .notes(vo.getNotes().orElse(null))
+                                            .activityTypeId(vo.getActivityTypeId().orElse(null))
+                                            .clothingLevel(vo.getClothingLevel().orElse(null))
+                                            .adjustedTempLevel(vo.getAdjustedTempLevel().orElse(null))
+                                            .adjustedHumidLevel(vo.getAdjustedHumidLevel().orElse(null))
+                                            .temperature(vo.getTemperature().orElse(null))
+                                            .humidity(vo.getHumidity().orElse(null))
+                                            .build();
     }
 
     public static RawCoordinate convertCoordinates(Object raw) {

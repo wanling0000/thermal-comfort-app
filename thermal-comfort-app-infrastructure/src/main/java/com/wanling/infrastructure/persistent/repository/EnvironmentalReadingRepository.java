@@ -82,4 +82,24 @@ public class EnvironmentalReadingRepository implements IEnvironmentalReadingRepo
                      )
                      .collect(Collectors.toList()); // 3. 转为列表返回
     }
+
+    @Override
+    public EnvironmentalReadingEntity findById(String readingId) {
+        EnvironmentalReadings po = environmentalReadingsMapper.selectByPrimaryKey(readingId);
+
+        if (po == null) {
+            return null;
+        }
+
+        return EnvironmentalReadingEntity.builder()
+                                         .readingId(po.getReadingId())
+                                         .timestamp(po.getTimestamp())
+                                         .temperature(po.getTemperature())
+                                         .humidity(po.getHumidity())
+                                         .sensorId(po.getSensorId())
+                                         .locationTagId(po.getLocationTagId())
+                                         .rawCoordinates(po.getRawCoordinates())
+                                         .userId(po.getUserId())
+                                         .build();
+    }
 }

@@ -5,8 +5,10 @@ import java.util.List;
 import com.alibaba.fastjson.JSON;
 import com.wanling.domain.environmental.model.entity.ComfortFeedbackEntity;
 import com.wanling.domain.environmental.model.entity.EnvironmentalReadingEntity;
+import com.wanling.domain.environmental.model.valobj.ComfortFeedbackWithReadingVO;
 import com.wanling.domain.environmental.service.IComfortFeedbackService;
 import com.wanling.trigger.api.dto.ComfortFeedbackResponseDTO;
+import com.wanling.trigger.api.dto.ComfortFeedbackWithReadingDTO;
 import com.wanling.trigger.api.dto.FeedbackWithReadingDTO;
 import com.wanling.trigger.api.dto.LocationDTO;
 import com.wanling.trigger.assembler.ComfortFeedbackAssembler;
@@ -67,18 +69,18 @@ public class ComfortFeedbackController {
     }
 
     @GetMapping("/by-month")
-    public Response<List<ComfortFeedbackResponseDTO>> getAllFeedbackByMonth(
+    public Response<List<ComfortFeedbackWithReadingDTO>> getAllFeedbackByMonth(
             @RequestParam("year") int year,
             @RequestParam("month") int month
     ) {
         String userId = LoginUserHolder.get().userId();
-        List<ComfortFeedbackEntity> entities = comfortFeedbackService.getFeedbackByMonth(year, month, userId);
+        List<ComfortFeedbackWithReadingVO> entities = comfortFeedbackService.getFeedbackByMonth(year, month, userId);
 
-        List<ComfortFeedbackResponseDTO> dtos = entities.stream()
-                                                           .map((ComfortFeedbackEntity entity) -> ComfortFeedbackAssembler.toResponseDTO(entity))
-                                                        .toList();
+        List<ComfortFeedbackWithReadingDTO> dtos = entities.stream()
+                                                           .map(ComfortFeedbackAssembler::toResponseDTO)
+                                                           .toList();
 
-        return Response.<List<ComfortFeedbackResponseDTO>>builder()
+        return Response.<List<ComfortFeedbackWithReadingDTO>>builder()
                        .code(ResponseCode.SUCCESS.getCode())
                        .info("getFeedbackByMonth(year, month);() success")
                        .data(dtos)

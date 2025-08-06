@@ -19,4 +19,5 @@ public interface IEnvironmentalReadingRepository {
     List<EnvironmentalReadingEntity> findByUserIdAndTimeRange(String userId, LocalDateTime startOfDay, LocalDateTime endOfDay);
 
     List<EnvironmentalReadingEntity> findByReadingIds(List<String> readingIds);
+    EnvironmentalReadingEntity findById(String readingId);
 }
