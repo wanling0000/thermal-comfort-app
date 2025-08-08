@@ -48,19 +48,29 @@ public class ComfortFeedbackController {
 
     @PostMapping("/submit-with-reading")
     public Response<String> submitFeedback(@RequestBody FeedbackWithReadingDTO dto) {
-        LocationDTO loc = dto.reading().location();
-        System.out.println("👀 displayName = " + loc.displayName());
-        log.info("✅ Received feedback: {}", JSON.toJSONString(dto));
+        log.warn("==== entered /submit-with-reading ====");
 
+        LocationDTO loc = dto.reading().location();
+        log.warn("dto.ok = {}", dto != null);
+        if (dto != null) {
+            log.warn("reading is null? {}", dto.reading() == null);
+            log.warn("feedback is null? {}", dto.feedback() == null);
+        }
         String userId = LoginUserHolder.get().userId();
+
+        if (dto == null || dto.feedback() == null || dto.reading() == null || userId == null) {
+            log.error("Bad request: dto/feedback/reading/userId missing.");
+            return Response.<String>builder().code("400").info("bad request").data("missing fields").build();
+        }
         EnvironmentalReadingEntity readingEntity = EnvironmentalReadingAssembler.toEntity(dto.reading(), userId);
         ComfortFeedbackEntity feedbackEntity = ComfortFeedbackAssembler.toEntity(dto.feedback());
 
-        log.info("📦 readingEntity = {}", JSON.toJSONString(readingEntity));
-        log.info("📦 feedbackEntity = {}", JSON.toJSONString(feedbackEntity));
+        log.warn("📦 readingEntity = {}", JSON.toJSONString(readingEntity));
+        log.warn("📦 feedbackEntity = {}", JSON.toJSONString(feedbackEntity));
 
         comfortFeedbackService.handleFeedbackWithReading(feedbackEntity, readingEntity);
 
+        log.warn("==== /submit-with-reading done ====");
         return Response.<String>builder()
                        .code(ResponseCode.SUCCESS.getCode())
                        .info("Feedback received")
